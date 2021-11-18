@@ -1,0 +1,72 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr,indentfirst, lastpage, xcolor, mdframed, abstract}
+\usepackage[italian]{babel}%traduzione parti generate atomaticamente
+\usepackage[version=4]{mhchem}%per formule e equazioni chimiche
+\usepackage[fontsize=13pt]{scrextend}
+\usepackage{graphicx,wrapfig,pgfplots,floatrow, tikz, subcaption, geometry}
+\usetikzlibrary{shapes.geometric, arrows, calc, patterns, positioning}%per flowchart
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{booktabs, tabularx, array, multicol}
+\usepackage[font=scriptsize]{caption}%per didascalia immagini 
+\geometry{a4paper,top=3cm,bottom=3cm,left=1.5cm,right=1.5cm} %dimensioni pagina benedetto
+\usepackage{xstring} % per creare p e h phrase command
+\usepackage{csquotes}
+\usepackage[autocite=superscript,style=chem-acs,articletitle,doi,url]{biblatex}%bibliografia
+\usepackage{hyperref}%hyperlinks
+
+
+\include{config} % file con settaggi da non toccare
+% Nome e Cognome 
+\def \nome {Nome}
+\def \cognome {Cognome}
+
+%titolo e nome
+\title{Laboratorio di xxxx \\ \huge{Template relazioni}}
+\author{\nome \ \cognome}
+\date{\today} %metti la data di quando hai fatto l'esperienza
+
+%page style
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\nome \ \cognome \\ Data consegna: xxxx}
+\lhead{Relazione n° x \\ Classe: XE}
+\rfoot{Pag. \thepage \hspace{1pt} di~\pageref{LastPage}}
+\setlength{\headheight}{22.54448pt}
+
+
+
+
+
+\begin{document}
+\begingroup
+  \maketitle
+  \thispagestyle{fancy}
+\endgroup
+
+%%%%%%% PARTE DA ELIMINARE %%%%%%
+    \begin{mdframed}[style=mdfabstract]
+        \begin{abstract}
+            La relazione tecnica che conclude un'esperienza ha lo scopo di comunicare gli obbiettivi del proprio lavoro, le modalit\`a con cui si \`e svolto e i risultati ottenuti.
+            
+            Essa dev'essere redatta in modo tale che chiunque possariprodurre l'esperimento realizzato e confrontare i risultati.
+            
+            Per questo motive la relazione tecnica deve essere articolata, nell'ordine, nei seguenti punti.
+        \end{abstract}
+    \end{mdframed}
+%%%%%%% FINE PARTE DA ELIMINARE %%%%%%
+\begingroup
+\let\clearpage\relax %tutti in successione senza creare nuove pagine
+\include{mainmatter/1_Obbiettivo}
+\include{mainmatter/2_Introduzione_teorica}
+\include{mainmatter/3_Strumenti}
+\include{mainmatter/4_Reagenti}
+\include{mainmatter/5_Procedimento}
+\include{mainmatter/6_Dati_e_Calcoli}
+\include{mainmatter/7_Conclusioni}
+\include{mainmatter/8_Bibliografia}
+\endgroup
+%stanno onguno su pagine diverse
+\include{mainmatter/9_H_e_P_frasi}
+\include{mainmatter/esempi}
+\end{document}

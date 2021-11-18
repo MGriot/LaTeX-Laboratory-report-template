@@ -1,0 +1,33 @@
+\section{Procedimento}
+Riferisce la procedura  operativa seguita. Spesso si completa con un disegno schematico dell'attrezzatura utilizzata, quando è utile per descrivere le istruzioni di assemblaggio della stessa. Qui devi spiegare in maniera sintetica ma esaustiva tutti i passaggi da te svolti durante l'esperimento.
+
+Sono ammessi anche dei commenti o delle osservazioni, se hanno senso. Magari ti sei accorto che una reazione è particolarmente esotermica e la provetta diventa troppo calda da tenere in mano e allora puoi scrivere in corsivo, o con altri stratagemmi, perfar capire che questo parte esula dal procedimento ma che è un consiglio per la buona riuscita dell'esperimento.
+
+es.
+Aggiungere la lega di di Devarda. 
+\textit{Attenzione! Dopo l'aggiunta il contenuto della provetta raggiunge alte temperature, meglio svolgere l'operazione vicino ad un bancone e con una scarabattola per posare la provetta.}
+
+
+Un altra cosa che puoi aggiungere è un flowchart che riassuma i passaggi, questo può servirti a te in prima batutta per aver chiaro il procedimento e eventualmente studiare.
+\begin{center}
+    \vspace{0.5cm}
+    \begin{tikzpicture}[node distance=2cm] % per guida -> https://it.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ%3A_A_Tutorial_for_Beginners_(Part_3)%E2%80%94Creating_Flowcharts
+    \node (start) [startstop] {Inizio};
+    \node (in1) [io, below of=start] {Ingresso};
+    \node (pro1) [process, below of=in1] {Processo 1};
+    \node (dec1) [decision, below of=pro1,  yshift=-0.5cm] {Decsione 1};
+    \node (pro2a) [process, below of=dec1, yshift=-0.5cm] {Process 2a};
+    \node (pro2b) [process, right of=dec1, xshift=2cm] {Process 2b};
+    \node (out1) [io, below of=pro2a] {Output};
+    \node (stop) [startstop, below of=out1] {Stop};
+    
+    \draw [arrow] (start) -- (in1);
+    \draw [arrow] (in1) -- (pro1);
+    \draw [arrow] (pro1) -- (dec1);
+    \draw [arrow] (dec1) -- node[anchor=east] {yes} (pro2a);
+    \draw [arrow] (dec1) -- node[anchor=south] {no} (pro2b);
+    \draw [arrow] (pro2b) |- (pro1); %per fare linea segmentata
+    \draw [arrow] (pro2a) -- (out1);
+    \draw [arrow] (out1) -- (stop);
+    \end{tikzpicture}
+\end{center}
