@@ -47,7 +47,7 @@ Per quanto riguarda `\title{Laboratorio di xxxx \\ \huge{Template relazioni}}` �
 
 Questa prima parte in particolare va a formare tutto quello che è racchiuso nel rettangolo in rosso nell'immagine sottostante:
 
-![Titolo](Template-relazione-LaTex\img\GitHub\titolo.png)
+![Titolo](img/GitHub/titolo.png)
 
 
 Subito dopo viene una parte importante che definisce la testatina e il piedipagina.
@@ -75,7 +75,7 @@ L'utlima riga, `\setlength{\headheight}{22.54448pt}`, sistema l'altezza della te
 
 Questa seconda parte va a formare tutto quello che è racchiuso nei rettangoli in rosso nell'immagine sottostante:
 
-![Testatina](Template-relazione-LaTex\img\GitHub\testatina_e_piedipagina.png)
+![Testatina](img/GitHub/testatina_e_piedipagina.png)
 
 In ultimo viene la sezione del testo vero e proprio.
 ```LaTex
