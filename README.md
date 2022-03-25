@@ -54,7 +54,7 @@ Subito dopo viene una parte importante che definisce la testatina e il piedipagi
 ```LaTex
 %page style
 \pagestyle{fancy}
-\fancypagestyle{plain}{} %prima pagina uguale alle altre
+\fancypagestyle{plain}{}
 \fancyhf{}
 \rhead{\nome \ \cognome \\ Data consegna: xxxx}
 \lhead{Relazione n° x \\ Classe: XE}
