@@ -47,7 +47,7 @@ Per quanto riguarda `\title{Laboratorio di xxxx \\ \huge{Template relazioni}}` Ã
 
 Questa prima parte in particolare va a formare tutto quello che Ã¨ racchiuso nel rettangolo in rosso nell'immagine sottostante:
 
-![Titolo](../img/GitHub/titolo.png)
+![Titolo](img/GitHub/titolo.png)
 
 
 Subito dopo viene una parte importante che definisce la testatina e il piedipagina.
