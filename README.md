@@ -30,7 +30,7 @@ In questo file, cuore pulsante del template trovi nelle prime righe:
 Continuando a scorrere il file ci si imbatte in:
 
 ```LaTex
-% Nome e Cognome 
+%Nome e Cognome 
 \def \nome {Nome}
 \def \cognome {Cognome}
 
@@ -44,3 +44,16 @@ In `\def \nome {Nome}` e `\def \cognome {Cognome}`, al posto di Nome  e Cognome 
 Per quanto riguarda `\title{Laboratorio di xxxx \\ \huge{Template relazioni}}` è il comando che permette la creazione del titolo, al posto di _"xxxx"_ va messo il nome della materia, in caso di necessità può essere cambiata tutta la parte _"Laboratorio di xxxx"_. Il secondo pezzo, invecem è il titolo vero e proprio e quindi bisogna sostituire _"Template relazioni"_ con il proprio titolo. 
 
 `\date{\today}` Inserisce la data di compilazione del file, generalmente però conviene mettere la data di svolgimento dell'esperienza che si vuole riportare.
+
+Subito dopo viene una parte importante che definisce la testatina e il piedipagina.
+```LaTex
+%page style
+\pagestyle{fancy}
+\fancypagestyle{plain}{} %prima pagina uguale alle altre
+\fancyhf{}
+\rhead{\nome \ \cognome \\ Data consegna: xxxx}
+\lhead{Relazione n° x \\ Classe: XE}
+\rfoot{Pag. \thepage \hspace{1pt} di \pageref{LastPage}}
+\lfoot{\includegraphics[scale=0.1]{img/GitHub/qrcode_github.com.png} Template \LaTeX \;di M.Griot}
+\setlength{\headheight}{22.54448pt}
+```

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.3.25)  25 MAR 2022 15:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.3.25)  25 MAR 2022 16:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1417,9 +1417,21 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18.72003> not available
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <18.72003> not available
 (Font)              size <17.28> substituted on input line 1.
 
-) (section/2_Principio_del_metodo.tex) (section/3_Strumenti.tex [1{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+) (section/2_Principio_del_metodo.tex) (section/3_Strumenti.tex
+<img/GitHub/qrcode_github.com.png, id=50, 382.42876pt x 382.42876pt>
+File: img/GitHub/qrcode_github.com.png Graphic file (type png)
+<use img/GitHub/qrcode_github.com.png>
+Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 4.
+(pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
 
-]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 41.84514pt, for example:
+(fancyhdr)                \setlength{\footskip}{41.84514pt}.
+
+[1{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+
+ <./img/GitHub/qrcode_github.com.png (PNG copy)>]
 
 LaTeX Font Warning: Font shape `TS1/cmr/m/n' in size <13> not available
 (Font)              size <12> substituted on input line 7.
@@ -1427,6 +1439,15 @@ LaTeX Font Warning: Font shape `TS1/cmr/m/n' in size <13> not available
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <13> not available
 (Font)              size <12> substituted on input line 9.
+
+File: img/GitHub/qrcode_github.com.png Graphic file (type png)
+<use img/GitHub/qrcode_github.com.png>
+Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 52.
+(pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 41.84514pt, for example:
+(fancyhdr)                \setlength{\footskip}{41.84514pt}.
 
 [2]
 LaTeX Font Info:    Calculating math sizes for size <13> on input line 58.
@@ -1521,6 +1542,15 @@ Package pdftex.def Info: img/pittogrammi/Explosive.png  used on input line 22.
 Underfull \hbox (badness 1931) in paragraph at lines 22--22
 []|\OT1/cmr/m/n/9 guanti, oc-chia-li
  []
+
+File: img/GitHub/qrcode_github.com.png Graphic file (type png)
+<use img/GitHub/qrcode_github.com.png>
+Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 28.
+(pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 41.84514pt, for example:
+(fancyhdr)                \setlength{\footskip}{41.84514pt}.
 
 [3 <./img/763.png> <./img/pittogrammi/Flammable.png> <./img/pittogrammi/Explosive.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 46--46
@@ -1632,18 +1662,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--85
 LaTeX Font Warning: Font shape `OT1/cmr/m/it' in size <13> not available
 (Font)              size <12> substituted on input line 8.
 
-[4]) (section/6_Reazioni.tex) (section/7_Dati_e_Calcoli.tex [5]
+File: img/GitHub/qrcode_github.com.png Graphic file (type png)
+<use img/GitHub/qrcode_github.com.png>
+Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 9.
+(pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 41.84514pt, for example:
+(fancyhdr)                \setlength{\footskip}{41.84514pt}.
+
+[4]) (section/6_Reazioni.tex) (section/7_Dati_e_Calcoli.tex
+File: img/GitHub/qrcode_github.com.png Graphic file (type png)
+<use img/GitHub/qrcode_github.com.png>
+Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 13.
+(pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 41.84514pt, for example:
+(fancyhdr)                \setlength{\footskip}{41.84514pt}.
+
+[5]
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <15.59996> not available
 (Font)              size <14.4> substituted on input line 36.
+
+File: img/GitHub/qrcode_github.com.png Graphic file (type png)
+<use img/GitHub/qrcode_github.com.png>
+Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 86.
+(pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 41.84514pt, for example:
+(fancyhdr)                \setlength{\footskip}{41.84514pt}.
 
 [6]) (section/8_Conclusioni.tex) (section/9_Bibliografia.tex)
 
 LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <13> not available
 (Font)              size <12> substituted on input line 8.
 
-[7] (section/10_H_e_P_frasi.tex) (section/link_utili.tex) (section/esempi.tex [8]
-<img/pittogrammi/Acute toxicity.png, id=166, 200.75pt x 200.75pt>
+File: img/GitHub/qrcode_github.com.png Graphic file (type png)
+<use img/GitHub/qrcode_github.com.png>
+Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 8.
+(pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 41.84514pt, for example:
+(fancyhdr)                \setlength{\footskip}{41.84514pt}.
+
+[7] (section/10_H_e_P_frasi.tex) (section/link_utili.tex) (section/esempi.tex
+File: img/GitHub/qrcode_github.com.png Graphic file (type png)
+<use img/GitHub/qrcode_github.com.png>
+Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 1.
+(pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 41.84514pt, for example:
+(fancyhdr)                \setlength{\footskip}{41.84514pt}.
+
+[8]
+<img/pittogrammi/Acute toxicity.png, id=168, 200.75pt x 200.75pt>
 File: img/pittogrammi/Acute toxicity.png Graphic file (type png)
 <use img/pittogrammi/Acute toxicity.png>
 Package pdftex.def Info: img/pittogrammi/Acute toxicity.png  used on input line 9.
@@ -1652,7 +1731,7 @@ File: img/pittogrammi/Explosive.png Graphic file (type png)
 <use img/pittogrammi/Explosive.png>
 Package pdftex.def Info: img/pittogrammi/Explosive.png  used on input line 14.
 (pdftex.def)             Requested size: 40.14928pt x 40.14928pt.
-<img/acbenz.png, id=167, 250.9375pt x 250.9375pt>
+<img/acbenz.png, id=169, 250.9375pt x 250.9375pt>
 File: img/acbenz.png Graphic file (type png)
 <use img/acbenz.png>
 Package pdftex.def Info: img/acbenz.png  used on input line 26.
@@ -1669,7 +1748,17 @@ File: img/acbenz.png Graphic file (type png)
 <use img/acbenz.png>
 Package pdftex.def Info: img/acbenz.png  used on input line 34.
 (pdftex.def)             Requested size: 125.46843pt x 125.46843pt.
- [9 <./img/pittogrammi/Acute toxicity.png> <./img/acbenz.png>]
+File: img/GitHub/qrcode_github.com.png Graphic file (type png)
+<use img/GitHub/qrcode_github.com.png>
+Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 42.
+(pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 41.84514pt, for example:
+(fancyhdr)                \setlength{\footskip}{41.84514pt}.
+
+[9 <./img/pittogrammi/Acute toxicity.png> <./img/acbenz.png>]
 File: img/pittogrammi/Acute toxicity.png Graphic file (type png)
 <use img/pittogrammi/Acute toxicity.png>
 Package pdftex.def Info: img/pittogrammi/Acute toxicity.png  used on input line 45.
@@ -1678,12 +1767,22 @@ File: img/pittogrammi/Explosive.png Graphic file (type png)
 <use img/pittogrammi/Explosive.png>
 Package pdftex.def Info: img/pittogrammi/Explosive.png  used on input line 46.
 (pdftex.def)             Requested size: 40.14928pt x 40.14928pt.
-<img/buretta.jpg, id=180, 84.19455pt x 128.27925pt>
+<img/buretta.jpg, id=182, 84.19455pt x 128.27925pt>
 File: img/buretta.jpg Graphic file (type jpg)
 <use img/buretta.jpg>
 Package pdftex.def Info: img/buretta.jpg  used on input line 55.
 (pdftex.def)             Requested size: 84.19434pt x 128.27893pt.
- [10 <./img/buretta.jpg>]
+File: img/GitHub/qrcode_github.com.png Graphic file (type png)
+<use img/GitHub/qrcode_github.com.png>
+Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 60.
+(pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 41.84514pt, for example:
+(fancyhdr)                \setlength{\footskip}{41.84514pt}.
+
+[10 <./img/buretta.jpg>]
 LaTeX Font Info:    Calculating math sizes for size <26.96207> on input line 108.
 
 
@@ -1718,9 +1817,50 @@ LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <18.87335> not available
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <13.48103> not available
 (Font)              size <14.4> substituted on input line 108.
 
-[11] [12] [13]
+File: img/GitHub/qrcode_github.com.png Graphic file (type png)
+<use img/GitHub/qrcode_github.com.png>
+Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 112.
+(pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 41.84514pt, for example:
+(fancyhdr)                \setlength{\footskip}{41.84514pt}.
+
+[11]
+File: img/GitHub/qrcode_github.com.png Graphic file (type png)
+<use img/GitHub/qrcode_github.com.png>
+Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 174.
+(pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 41.84514pt, for example:
+(fancyhdr)                \setlength{\footskip}{41.84514pt}.
+
+[12]
+File: img/GitHub/qrcode_github.com.png Graphic file (type png)
+<use img/GitHub/qrcode_github.com.png>
+Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 201.
+(pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 41.84514pt, for example:
+(fancyhdr)                \setlength{\footskip}{41.84514pt}.
+
+[13]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 203.
- [14] (d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.tdo
+File: img/GitHub/qrcode_github.com.png Graphic file (type png)
+<use img/GitHub/qrcode_github.com.png>
+Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 208.
+(pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 41.84514pt, for example:
+(fancyhdr)                \setlength{\footskip}{41.84514pt}.
+
+[14] (d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.tdo
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
   
  []
@@ -1731,6 +1871,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--4
 
 ) 
 AED: lastpage setting LastPage
+File: img/GitHub/qrcode_github.com.png Graphic file (type png)
+<use img/GitHub/qrcode_github.com.png>
+Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 45.
+(pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 41.84514pt, for example:
+(fancyhdr)                \setlength{\footskip}{41.84514pt}.
+
 [15] (d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1743,17 +1892,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50081 strings out of 478582
- 1117937 string characters out of 2856538
- 1995420 words of memory out of 3000000
- 67382 multiletter control sequences out of 15000+600000
- 487940 words of font info for 100 fonts, out of 8000000 for 9000
+ 50097 strings out of 478582
+ 1118288 string characters out of 2856538
+ 1996489 words of memory out of 3000000
+ 67396 multiletter control sequences out of 15000+600000
+ 489639 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,21n,109p,1215b,2406s stack positions out of 10000i,1000n,20000p,200000b,80000s
- <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.pdf (15 pages, 361766 bytes).
+ <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.pdf (15 pages, 378155 bytes).
 PDF statistics:
- 337 PDF objects out of 1000 (max. 8388607)
+ 343 PDF objects out of 1000 (max. 8388607)
  72 named destinations out of 1000 (max. 500000)
- 131 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
