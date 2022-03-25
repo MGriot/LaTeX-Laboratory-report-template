@@ -45,6 +45,11 @@ Per quanto riguarda `\title{Laboratorio di xxxx \\ \huge{Template relazioni}}` �
 
 `\date{\today}` Inserisce la data di compilazione del file, generalmente però conviene mettere la data di svolgimento dell'esperienza che si vuole riportare.
 
+Questa prima parte in particolare va a formare tutto quello che è racchiuso nel rettangolo in rosso nell'immagine sottostante:
+
+![Titolo](img\GitHub\titolo.png)
+
+
 Subito dopo viene una parte importante che definisce la testatina e il piedipagina.
 ```LaTex
 %page style
@@ -56,4 +61,42 @@ Subito dopo viene una parte importante che definisce la testatina e il piedipagi
 \rfoot{Pag. \thepage \hspace{1pt} di \pageref{LastPage}}
 \lfoot{\includegraphics[scale=0.1]{img/GitHub/qrcode_github.com.png} Template \LaTeX \;di M.Griot}
 \setlength{\headheight}{22.54448pt}
+```
+
+`\rhead{\nome \ \cognome \\ Data consegna: xxxx}` si occupa di andare a mettere il nome e il cognome dell'autore, questa parte in automatico, e la data di consegna nella testatina del documento di ogni pagina. Per la data occorre mettere al posto di _"xxxx"_ la data di consegna della relazione. Questo serve per avere un tracciamento migliore dello svolgimento delle attività di laboratorio.
+
+La riga `\lhead{Relazione n° x \\ Classe: XE}` permette di srivere il numero della relazione, nel caso si scrivessero più relazioni nel corso del tempo, occorre sostituire _"x"_ con il numero corretto. Vi è anche la possibilità di inserire la classe o corso andado a modificare _"Classe: XE"_ con quella vostra.
+
+`\rfoot{Pag. \thepage \hspace{1pt} di \pageref{LastPage}}`, invece, va a scrivere il numero di pagina a pie di pagina destro mettendo il numero della pagina corrente e il numero totale di pagine, utile se si ha paura che alcuni fogli possano essere persi. Si consiglia di non modificare più di tanto.
+
+`\lfoot{\includegraphics[scale=0.1]{img/GitHub/qrcode_github.com.png} Template \LaTeX \;di M.Griot}` è la penultima riga e crea in basso a sinistra un QRcode con il link a questa pagina e indica l'autore del template. Nel caso non si voglia quest'aggiunta basta eliminare per intero la riga. Ovviamente, qualora venga utilizzato questo template fa piacere che venga riportato l'indirizzo di questa pagina o il nome del suo autore ma la decisione spetta a te!
+
+L'utlima riga, `\setlength{\headheight}{22.54448pt}`, sistema l'altezza della testatina e il pie di pagina e si consiglia di non modificare.
+
+Questa seconda parte va a formare tutto quello che è racchiuso nei rettangoli in rosso nell'immagine sottostante:
+
+![Titolo](img\GitHub\testatina_e_piedipagina.png)
+
+In ultimo viene la sezione del testo vero e proprio.
+```LaTex
+\hypersetup{pdftitle={Template Example}, pdfauthor={\cognome \; \nome}}
+
+\begin{document}
+
+\maketitle 
+\input{section/0_Sommario} 
+\input{section/1_Obbiettivo}
+\input{section/2_Principio_del_metodo}
+\input{section/3_Strumenti}
+\input{section/4_Reagenti}
+\input{section/5_Procedimento}
+\input{section/6_Reazioni}
+\input{section/7_Dati_e_Calcoli}
+\input{section/8_Conclusioni}
+\input{section/9_Bibliografia}
+\input{section/10_H_e_P_frasi} 
+
+\input{section/link_utili}
+\input{section/esempi}
+\end{document}
 ```
