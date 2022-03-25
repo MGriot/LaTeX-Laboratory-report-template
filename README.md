@@ -3,6 +3,8 @@
 Questo che vedete è un template per scrivere le relazioni di laboratorio in LaTex, ha un impronta prevalentemente chimica ma può essere adattato a qualsiasi esigenza.
 Un esempio di questo template è disponibile a [Template_relazioni](https://github.com/MGriot/Template-relazione-LaTex/blob/master/.out/main.pdf).
 
+Questa guida però non vuole essere un tutorial su come si scriva in LaTex e quindi da per scontato che sappiate come si scrive un file LaTex.
+
 ## Introduzione
 Il template è strutturato in maniera da poter scrivere comodamente una relazione suddividendo ogni sezione in un file diverso collocato nella cartella `section`.
 Ci sono però dei file di più grande importanza che vengono elencati qua sotto e affrontati in una sezione apposita uno per volta.
@@ -99,4 +101,42 @@ In ultimo viene la sezione del testo vero e proprio.
 \input{section/link_utili}
 \input{section/esempi}
 \end{document}
+```
+La prima riga `\hypersetup{pdftitle={Template Example}, pdfauthor={\cognome \; \nome}}` serve per mostrare il nome del file e l'autore come proprietà del pdf generato.
+
+`\maketitle` consente di costruire la sezione di Titolo che prima abbiamo discusso. Non va cencellata altrimenti il titolo del documento sparirebbe.
+
+Tutte le righe comprese tra `\maketitle` e `\end{document}` sono tutte le sezioni che vengono importate per comporre il documento. Quelle che vedono un numero prima del nome, es `\input{section/1_Obbiettivo}`, sono da mantenere, in base alla necessità, mentre le ultime due righe si possono cancellare in quanto caricano del testo utile al Template ma inutile al fine di una relazione.
+
+## settings
+Questo file che si raggiunge tramite il percorso: `config/settings` è il file dedicato a tenere le informazioni e preferenze per la costruzione del documento.
+Le linee di codice che lo compongono sono poche e semplici.
+```LaTex
+%%%%%Colors
+\definecolor{red}{RGB}{255,0,0}
+\definecolor{orange}{RGB}{255,165,0}
+\definecolor{blue}{RGB}{0,0,255}
+\definecolor{green}{RGB}{143,206,0}
+
+%%%%%%%%%% ToDo notes
+% \usepackage[colorinlistoftodos,prependcaption,textsize=tiny,disable]{todonotes}
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=orange,backgroundcolor=orange!25,bordercolor=orange,#1]{#2}}
+\newcommandx{\info}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\improvement}[2][1=]{\todo[linecolor=green,backgroundcolor=green!25,bordercolor=green,#1]{#2}}
+\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+
+%per flowchart
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\pgfplotsset{compat=1.18}
+
+%per frasi H e P
+\input{config/H_P_command}
+
+%aggiunge il file di bibliografia per fare le citazioni
+\addbibresource{bibliography.bib} %Import the bibliography file
 ```
