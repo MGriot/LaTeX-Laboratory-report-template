@@ -111,6 +111,7 @@ Tutte le righe comprese tra `\maketitle` e `\end{document}` sono tutte le sezion
 ## settings
 Questo file che si raggiunge tramite il percorso: `config/settings` è il file dedicato a tenere le informazioni e preferenze per la costruzione del documento.
 Le linee di codice che lo compongono sono poche e semplici.
+
 ```LaTex
 %%%%%Colors
 \definecolor{red}{RGB}{255,0,0}
@@ -140,3 +141,16 @@ Le linee di codice che lo compongono sono poche e semplici.
 %aggiunge il file di bibliografia per fare le citazioni
 \addbibresource{bibliography.bib} %Import the bibliography file
 ```
+Le linee sotto a `%%%%%Colors` permettono di definire dei colori, possono essere aggiunti altri colori manualmente per personalizzare ulteriormente il proprio documento.
+
+Le linee sotto a `ToDo notes` permettono di definire dei marker all'interno del testo, utili per evidenziare lacune parti, scrivere degli appunti o degli allert come mostrato nelle figure sottostanti.
+![To-do note](img/GitHub/todo_note.png)
+![To-do note2](img/GitHub/todo_note2.png)
+
+
+Le linee sotto a `%per flowchart` sono per definire le impostazioni per costruire dei flowcart, in particolare le celle e le frecce. Possono essere modificati o aggiunte altre forme geometriche.
+![Flowchart](img/GitHub/flowchart.png)
+
+La riga `\input{config/H_P_command}` permette di importare un file che consente di scrivere le frasi P e H in maniera veloce e automatica all'interno della relazione scrivendo solo il numero di tali frasi.
+
+In ultimo la riga `\addbibresource{bibliography.bib}` ha il compito di importare il file contenente i dettagli della bibliografia in formato `.bib`
