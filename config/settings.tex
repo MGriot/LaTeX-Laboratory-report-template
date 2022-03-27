@@ -1,4 +1,21 @@
 %File con config utili allo stile della relazione, in linea di massima qua non devi toccare nulla
+%Nome e Cognome 
+\def \nome {Nome}
+\def \cognome {Cognome}
+
+%page border and dimension
+\geometry{a4paper,top=3cm,bottom=3cm,left=1.5cm,right=1.5cm}
+
+%page style
+\pagestyle{fancy}
+\fancypagestyle{plain}{} %prima pagina uguale alle altre
+\fancyhf{}
+\rhead{\nome \ \cognome \\ Data consegna: xxxx}
+\lhead{Relazione n° x \\ Classe: XE}
+\rfoot{Pag. \thepage \hspace{1pt} di \pageref{LastPage}}
+\lfoot{\includegraphics[scale=0.1]{img/GitHub/qrcode_github.com.png} Template \LaTeX \;di M.Griot}
+\setlength{\headheight}{22.54448pt}
+\setlength{\footskip}{41.84514pt}
 
 %%%%%Colors
 \definecolor{red}{RGB}{255,0,0}
@@ -22,8 +39,16 @@
 \tikzstyle{arrow} = [thick,->,>=stealth]
 \pgfplotsset{compat=1.18}
 
+\usetikzlibrary{shapes.geometric, arrows, calc, patterns, positioning}%per flowchart
+
 %per frasi H e P
 \input{config/H_P_command}
 
+%set title and author in pdf information
+\hypersetup{pdftitle={Template Example}, pdfauthor={\cognome \; \nome}}
+
 %aggiunge il file di bibliografia per fare le citazioni
 \addbibresource{bibliography.bib} %Import the bibliography file
+
+
+

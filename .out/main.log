@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.3.25)  25 MAR 2022 16:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.3.25)  27 MAR 2022 14:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -88,7 +88,7 @@ Already applied: [0000/00/00] Usage of raw or classic option list on input line 
 )))
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13> not available
-(Font)              size <12> substituted on input line 5.
+(Font)              size <12> substituted on input line 4.
 
 (D:\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
@@ -771,16 +771,6 @@ Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \TX@delta=\dimen350
 \TX@cols=\count347
 \TX@ftn=\toks54
-) (D:\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.geometric.code.tex
-File: tikzlibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
- (D:\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.geometric.code.tex
-File: pgflibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)) (D:\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypatterns.code.tex
-File: tikzlibrarypatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
- (D:\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibrarypatterns.code.tex
-File: pgflibrarypatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)) (D:\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (D:\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen351
@@ -873,8 +863,7 @@ Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 \decimalpart=\count363
 )
 Package: xstring 2021/07/21 v1.84 String manipulations (CT)
-)
-(D:\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+) (D:\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
 \csq@reset=\count364
 \csq@gtype=\count365
@@ -904,6 +893,9 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 \XKV@depth=\count370
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
+(D:\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
 \c@@todonotes@numberoftodonotes=\count371
 ) (D:\Programs\MiKTeX\tex/latex/xargs\xargs.sty
 Package: xargs 2008/03/22 v1.1  extended macro definitions  (mpg)
@@ -1221,43 +1213,52 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip188
-) (config/settings.tex (config/H_P_command.tex))
+) (config/settings.tex (D:\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (D:\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)) (D:\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (D:\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibrarypatterns.code.tex
+File: pgflibrarypatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)) (config/H_P_command.tex)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 26.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 48.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 3.26288pt
-(hyperref)                removed on input line 26.
+(hyperref)                removed on input line 48.
 
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'italian'.
-(d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.aux)
+ (d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Info: Redefining \it@ocap on input line 28.
-LaTeX Info: Redefining \it@ccap on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Info: Redefining \it@ocap on input line 12.
+LaTeX Info: Redefining \it@ccap on input line 12.
 
 
 File italian.ldf warning: 
@@ -1265,7 +1266,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 28.
+italian.ldf    on input line 12.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1287,7 +1288,7 @@ italian.ldf    on input line 28.
 * \headheight=22.54448pt
 * \headsep=25.0pt
 * \topskip=10.0pt
-* \footskip=30.0pt
+* \footskip=41.84514pt
 * \marginparwidth=57.0pt
 * \marginparsep=11.0pt
 * \columnsep=10.0pt
@@ -1303,7 +1304,7 @@ italian.ldf    on input line 28.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 28.
+(lastpage)             ! on input line 12.
 (D:\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count513
@@ -1324,7 +1325,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 
-Package chemgreek Info: Activating mapping `default' on line 28.
+Package chemgreek Info: Activating mapping `default' on line 12.
 
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
@@ -1356,9 +1357,9 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.bbl)
-Package biblatex Info: Reference section=0 on input line 28.
-Package biblatex Info: Reference segment=0 on input line 28.
-Package hyperref Info: Link coloring OFF on input line 28.
+Package biblatex Info: Reference section=0 on input line 12.
+Package biblatex Info: Reference segment=0 on input line 12.
+Package hyperref Info: Link coloring OFF on input line 12.
  (D:\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (D:\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -1368,9 +1369,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count520
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
+LaTeX Info: Redefining \ref on input line 12.
+LaTeX Info: Redefining \pageref on input line 12.
+LaTeX Info: Redefining \nameref on input line 12.
  (d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.out) (d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -1378,30 +1379,30 @@ LaTeX Info: Redefining \nameref on input line 28.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <22.46396> not available
-(Font)              size <20.74> substituted on input line 31.
+(Font)              size <20.74> substituted on input line 15.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <26.96207> not available
-(Font)              size <24.88> substituted on input line 31.
+(Font)              size <24.88> substituted on input line 15.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <15.59996> not available
-(Font)              size <14.4> substituted on input line 31.
+(Font)              size <14.4> substituted on input line 15.
 
-LaTeX Font Info:    Calculating math sizes for size <15.59996> on input line 31.
+LaTeX Font Info:    Calculating math sizes for size <15.59996> on input line 15.
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <15.59996> not available
-(Font)              size <14.4> substituted on input line 31.
+(Font)              size <14.4> substituted on input line 15.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <15.59996> not available
-(Font)              size <14.4> substituted on input line 31.
+(Font)              size <14.4> substituted on input line 15.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 31.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
 (D:\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 31.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
  (D:\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (section/0_Sommario.tex) (section/1_Obbiettivo.tex
@@ -1423,13 +1424,7 @@ File: img/GitHub/qrcode_github.com.png Graphic file (type png)
 <use img/GitHub/qrcode_github.com.png>
 Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 4.
 (pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
-
-
-Package fancyhdr Warning: \footskip is too small (30.0pt): 
-(fancyhdr)                Make it at least 41.84514pt, for example:
-(fancyhdr)                \setlength{\footskip}{41.84514pt}.
-
-[1{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+ [1{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
  <./img/GitHub/qrcode_github.com.png (PNG copy)>]
 
@@ -1444,11 +1439,6 @@ File: img/GitHub/qrcode_github.com.png Graphic file (type png)
 <use img/GitHub/qrcode_github.com.png>
 Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 52.
 (pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
-
-Package fancyhdr Warning: \footskip is too small (30.0pt): 
-(fancyhdr)                Make it at least 41.84514pt, for example:
-(fancyhdr)                \setlength{\footskip}{41.84514pt}.
-
 [2]
 LaTeX Font Info:    Calculating math sizes for size <13> on input line 58.
 
@@ -1547,11 +1537,6 @@ File: img/GitHub/qrcode_github.com.png Graphic file (type png)
 <use img/GitHub/qrcode_github.com.png>
 Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 28.
 (pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
-
-Package fancyhdr Warning: \footskip is too small (30.0pt): 
-(fancyhdr)                Make it at least 41.84514pt, for example:
-(fancyhdr)                \setlength{\footskip}{41.84514pt}.
-
 [3 <./img/763.png> <./img/pittogrammi/Flammable.png> <./img/pittogrammi/Explosive.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 46--46
 []|\OT1/cmr/bx/n/9 Formula di
@@ -1666,23 +1651,12 @@ File: img/GitHub/qrcode_github.com.png Graphic file (type png)
 <use img/GitHub/qrcode_github.com.png>
 Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 9.
 (pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
-
-Package fancyhdr Warning: \footskip is too small (30.0pt): 
-(fancyhdr)                Make it at least 41.84514pt, for example:
-(fancyhdr)                \setlength{\footskip}{41.84514pt}.
-
 [4]) (section/6_Reazioni.tex) (section/7_Dati_e_Calcoli.tex
 File: img/GitHub/qrcode_github.com.png Graphic file (type png)
 <use img/GitHub/qrcode_github.com.png>
 Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 13.
 (pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
-
-
-Package fancyhdr Warning: \footskip is too small (30.0pt): 
-(fancyhdr)                Make it at least 41.84514pt, for example:
-(fancyhdr)                \setlength{\footskip}{41.84514pt}.
-
-[5]
+ [5]
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <15.59996> not available
 (Font)              size <14.4> substituted on input line 36.
@@ -1691,11 +1665,6 @@ File: img/GitHub/qrcode_github.com.png Graphic file (type png)
 <use img/GitHub/qrcode_github.com.png>
 Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 86.
 (pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
-
-Package fancyhdr Warning: \footskip is too small (30.0pt): 
-(fancyhdr)                Make it at least 41.84514pt, for example:
-(fancyhdr)                \setlength{\footskip}{41.84514pt}.
-
 [6]) (section/8_Conclusioni.tex) (section/9_Bibliografia.tex)
 
 LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <13> not available
@@ -1705,23 +1674,12 @@ File: img/GitHub/qrcode_github.com.png Graphic file (type png)
 <use img/GitHub/qrcode_github.com.png>
 Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 8.
 (pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
-
-Package fancyhdr Warning: \footskip is too small (30.0pt): 
-(fancyhdr)                Make it at least 41.84514pt, for example:
-(fancyhdr)                \setlength{\footskip}{41.84514pt}.
-
 [7] (section/10_H_e_P_frasi.tex) (section/link_utili.tex) (section/esempi.tex
 File: img/GitHub/qrcode_github.com.png Graphic file (type png)
 <use img/GitHub/qrcode_github.com.png>
 Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 1.
 (pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
-
-
-Package fancyhdr Warning: \footskip is too small (30.0pt): 
-(fancyhdr)                Make it at least 41.84514pt, for example:
-(fancyhdr)                \setlength{\footskip}{41.84514pt}.
-
-[8]
+ [8]
 <img/pittogrammi/Acute toxicity.png, id=168, 200.75pt x 200.75pt>
 File: img/pittogrammi/Acute toxicity.png Graphic file (type png)
 <use img/pittogrammi/Acute toxicity.png>
@@ -1752,13 +1710,7 @@ File: img/GitHub/qrcode_github.com.png Graphic file (type png)
 <use img/GitHub/qrcode_github.com.png>
 Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 42.
 (pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
-
-
-Package fancyhdr Warning: \footskip is too small (30.0pt): 
-(fancyhdr)                Make it at least 41.84514pt, for example:
-(fancyhdr)                \setlength{\footskip}{41.84514pt}.
-
-[9 <./img/pittogrammi/Acute toxicity.png> <./img/acbenz.png>]
+ [9 <./img/pittogrammi/Acute toxicity.png> <./img/acbenz.png>]
 File: img/pittogrammi/Acute toxicity.png Graphic file (type png)
 <use img/pittogrammi/Acute toxicity.png>
 Package pdftex.def Info: img/pittogrammi/Acute toxicity.png  used on input line 45.
@@ -1776,13 +1728,7 @@ File: img/GitHub/qrcode_github.com.png Graphic file (type png)
 <use img/GitHub/qrcode_github.com.png>
 Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 60.
 (pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
-
-
-Package fancyhdr Warning: \footskip is too small (30.0pt): 
-(fancyhdr)                Make it at least 41.84514pt, for example:
-(fancyhdr)                \setlength{\footskip}{41.84514pt}.
-
-[10 <./img/buretta.jpg>]
+ [10 <./img/buretta.jpg>]
 LaTeX Font Info:    Calculating math sizes for size <26.96207> on input line 108.
 
 
@@ -1821,46 +1767,23 @@ File: img/GitHub/qrcode_github.com.png Graphic file (type png)
 <use img/GitHub/qrcode_github.com.png>
 Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 112.
 (pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
-
-Package fancyhdr Warning: \footskip is too small (30.0pt): 
-(fancyhdr)                Make it at least 41.84514pt, for example:
-(fancyhdr)                \setlength{\footskip}{41.84514pt}.
-
 [11]
 File: img/GitHub/qrcode_github.com.png Graphic file (type png)
 <use img/GitHub/qrcode_github.com.png>
 Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 174.
 (pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
-
-
-Package fancyhdr Warning: \footskip is too small (30.0pt): 
-(fancyhdr)                Make it at least 41.84514pt, for example:
-(fancyhdr)                \setlength{\footskip}{41.84514pt}.
-
-[12]
+ [12]
 File: img/GitHub/qrcode_github.com.png Graphic file (type png)
 <use img/GitHub/qrcode_github.com.png>
 Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 201.
 (pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
-
-
-Package fancyhdr Warning: \footskip is too small (30.0pt): 
-(fancyhdr)                Make it at least 41.84514pt, for example:
-(fancyhdr)                \setlength{\footskip}{41.84514pt}.
-
-[13]
+ [13]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 203.
 File: img/GitHub/qrcode_github.com.png Graphic file (type png)
 <use img/GitHub/qrcode_github.com.png>
 Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 208.
 (pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
-
-
-Package fancyhdr Warning: \footskip is too small (30.0pt): 
-(fancyhdr)                Make it at least 41.84514pt, for example:
-(fancyhdr)                \setlength{\footskip}{41.84514pt}.
-
-[14] (d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.tdo
+ [14] (d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.tdo
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
   
  []
@@ -1873,13 +1796,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--4
 AED: lastpage setting LastPage
 File: img/GitHub/qrcode_github.com.png Graphic file (type png)
 <use img/GitHub/qrcode_github.com.png>
-Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 45.
+Package pdftex.def Info: img/GitHub/qrcode_github.com.png  used on input line 29.
 (pdftex.def)             Requested size: 38.2451pt x 38.2451pt.
-
-Package fancyhdr Warning: \footskip is too small (30.0pt): 
-(fancyhdr)                Make it at least 41.84514pt, for example:
-(fancyhdr)                \setlength{\footskip}{41.84514pt}.
-
 [15] (d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1892,15 +1810,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50097 strings out of 478582
- 1118288 string characters out of 2856538
- 1996489 words of memory out of 3000000
- 67396 multiletter control sequences out of 15000+600000
+ 50101 strings out of 478582
+ 1118394 string characters out of 2856538
+ 1996518 words of memory out of 3000000
+ 67399 multiletter control sequences out of 15000+600000
  489639 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,21n,109p,1215b,2406s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 113i,21n,109p,1215b,2402s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><D:/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.pdf (15 pages, 378155 bytes).
+Output written on d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.pdf (15 pages, 378290 bytes).
 PDF statistics:
  343 PDF objects out of 1000 (max. 8388607)
  72 named destinations out of 1000 (max. 500000)
