@@ -1,10 +1,19 @@
 # Template-relazione-LaTex
 
+- [Template-relazione-LaTex](#template-relazione-latex)
+  - [Introduzione](#introduzione)
+  - [main.tex](#maintex)
+  - [settings.tex](#settingstex)
+  - [package.tex](#packagetex)
+  - [bibliography.bib](#bibliographybib)
+  - [img/](#img)
+  - [section/](#section)
+
+
 Questo che vedete è un template per scrivere le relazioni di laboratorio in LaTex, ha un impronta prevalentemente chimica ma può essere adattato a qualsiasi esigenza.
 Un esempio di questo template è disponibile a [Template_relazioni](https://github.com/MGriot/Template-relazione-LaTex/blob/master/.out/main.pdf).
 
 Questa guida però non vuole essere un tutorial su come si scriva in LaTex e quindi da per scontato che sappiate come si scrive un file LaTex.
-
 ## Introduzione
 
 Il template è strutturato in maniera da poter scrivere comodamente una relazione suddividendo ogni sezione in un file diverso collocato nella cartella `section`.
@@ -115,7 +124,7 @@ La prima riga `\hypersetup{pdftitle={Template Example}, pdfauthor={\cognome \; \
 
 Tutte le righe comprese tra `\maketitle` e `\end{document}` sono tutte le sezioni che vengono importate per comporre il documento. Quelle che vedono un numero prima del nome, es `\input{section/1_Obbiettivo}`, sono da mantenere, in base alla necessità, mentre le ultime due righe si possono cancellare in quanto caricano del testo utile al Template ma inutile al fine di una relazione.
 
-## settings
+## settings.tex
 
 Questo file che si raggiunge tramite il percorso: `config/settings` è il file dedicato a tenere le informazioni e preferenze per la costruzione del documento.
 Le linee di codice che lo compongono sono poche e semplici.
@@ -163,7 +172,7 @@ La riga `\input{config/H_P_command}` permette di importare un file che consente 
 
 In ultimo la riga `\addbibresource{bibliography.bib}` ha il compito di importare il file contenente i dettagli della bibliografia in formato `.bib`
 
-## package
+## package.tex
 
 E' il file adibito a contenere tutti i package utilizzati per questo documento. Qual'ora fosse necessario si possono aggiungere altri pacchetti.
 
@@ -214,7 +223,7 @@ Non si analizzeranno tutti i pacchetti installati ma ci si soffermerà solo su a
 
 `\usepackage[autocite=superscript,style=chem-acs,articletitle,doi,url]{biblatex` imposta uno stile di citazione con _biblatex_ in linera con l'America Chemica Society, per usare questo stile bisogna usare il comando `\autocite` nel testo.
 
-## bibliography
+## bibliography.bib
 
 In questo file vengono conservati tutti i dati necesasri alle citazioni. Vederere la documentazione di _biblatex_ per maggiori informazioni.
 
