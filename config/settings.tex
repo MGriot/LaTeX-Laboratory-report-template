@@ -4,7 +4,7 @@
 \def \cognome {Cognome}
 
 %page border and dimension
-\geometry{a4paper,top=3cm,bottom=3cm,left=1.5cm,right=1.5cm}
+\geometry{a4paper,top=3cm,bottom=3cm,left=3cm,right=3cm}
 
 %page style
 \pagestyle{fancy}
@@ -16,6 +16,12 @@
 \lfoot{\includegraphics[scale=0.1]{img/GitHub/qrcode_github.com.png} Template \LaTeX \;di M.Griot}
 \setlength{\headheight}{22.54448pt}
 \setlength{\footskip}{41.84514pt}
+
+
+%titolo e data
+\title{Laboratorio di xxxx \\ \huge{Template relazioni}} % al posto di xxxx va il nome della materia, in huge va il titolo dell'esperienza
+\author{\nome \ \cognome}
+\date{\today} %metti la data di quando hai fatto l'esperienza
 
 %noindent, se abilitata toglie l'identazione in tutto il documento
 %\setlength{\parindent}{0pt}
@@ -48,7 +54,7 @@
 \input{config/H_P_command}
 
 %set title and author in pdf information
-\hypersetup{pdftitle={Template Example}, pdfauthor={\cognome \; \nome}}
+\hypersetup{pdftitle={Template Example}, pdfauthor={\cognome \nome}}
 
 %aggiunge il file di bibliografia per fare le citazioni
 \addbibresource{bibliography.bib} %Import the bibliography file
