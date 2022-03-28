@@ -1,17 +1,17 @@
 # Fdb version 3
-["biber .out/main"] 1648383569 ".out/main.bcf" ".out/main.bbl" ".out/main" 1648453511
-  ".out/main.bcf" 1648453510 106624 08961dd18367bd8cc0e6912eb476cc57 "pdflatex"
-  ".out\main.bcf" 1648453510 106624 08961dd18367bd8cc0e6912eb476cc57 ""
+["biber .out/main"] 1648461340 ".out/main.bcf" ".out/main.bbl" ".out/main" 1648469264
+  ".out/main.bcf" 1648469263 106624 08961dd18367bd8cc0e6912eb476cc57 "pdflatex"
+  ".out\main.bcf" 1648469263 106624 08961dd18367bd8cc0e6912eb476cc57 ""
   "bibliography.bib" 1648208820 1083 86cdade362a49a34f48753f621111806 ""
   (generated)
   ".out/main.bbl"
   ".out/main.blg"
-["pdflatex"] 1648453502 "d:/Documenti_personali/Programming/LaTex/Template-relazione-LaTex/main.tex" ".out/main.pdf" "main" 1648453511
-  ".out/main.aux" 1648453510 9286 37d8879ef442a2d7cd4ea297d7016e23 "pdflatex"
-  ".out/main.bbl" 1648383572 1821 63b3764e277597a51fa58d763cf21170 "biber .out/main"
-  ".out/main.out" 1648453510 1234 f891e42e65957e38ea3f871f7bad3990 "pdflatex"
-  ".out/main.run.xml" 1648453510 2412 d6345147ade2347c476a2779011c7bc2 "pdflatex"
-  ".out/main.tdo" 1648453510 926 59ae5d2686dcccc28950da5b6f745624 "pdflatex"
+["pdflatex"] 1648469255 "d:/Documenti_personali/Programming/LaTex/Template-relazione-LaTex/main.tex" ".out/main.pdf" "main" 1648469264
+  ".out/main.aux" 1648469263 9755 4e38f9a21436d4d13582f3f46428fceb "pdflatex"
+  ".out/main.bbl" 1648461343 1821 63b3764e277597a51fa58d763cf21170 "biber .out/main"
+  ".out/main.out" 1648469263 1234 f891e42e65957e38ea3f871f7bad3990 "pdflatex"
+  ".out/main.run.xml" 1648469263 2412 d6345147ade2347c476a2779011c7bc2 "pdflatex"
+  ".out/main.tdo" 1648469263 1221 0d078ed8d491a650dbff949e0880aa3b "pdflatex"
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1648222135 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0900.pk" 1637140574 10472 a8960aab0ae25fb6a8c90c2ce95f6d4d ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1631778666 11548 187d517a3df87be195d0ce99d14e85bb ""
@@ -324,9 +324,9 @@
   "section/0_Sommario.tex" 1648452996 626 c6d76c52676e8cf2bd1ad62aa8893ed3 ""
   "section/10_H_e_P_frasi.tex" 1648208820 811 133cd63422b194c9ff38cf10485faf3c ""
   "section/1_Obbiettivo.tex" 1648453414 402 fe40bf53ed081ea1fa73d937ea62afd4 ""
-  "section/2_Principio_del_metodo.tex" 1648208820 508 02385ce9efd59a6e749c2d4277a532d4 ""
-  "section/3_Strumenti.tex" 1648208820 2299 a59cee7dc6716abb0a0f5d6bb738a5ba ""
-  "section/4_Reagenti.tex" 1648208820 5265 9373d1aa67d5e6c0b74f767ae0d09017 ""
+  "section/2_Principio_del_metodo.tex" 1648460870 565 c3ec570da91aed9f10e914fa4a6a0000 ""
+  "section/3_Strumenti.tex" 1648461327 2235 e4a7fe7021aeb0c68d67be0fba9dc29b ""
+  "section/4_Reagenti.tex" 1648469243 5595 24e7e73c0299b7c2ffc87524eeb390d3 ""
   "section/5_Procedimento.tex" 1648208820 1100 a40fd0dbee8e250458e473442756cf98 ""
   "section/6_Reazioni.tex" 1648208820 162 ec21dcbc3f237c49fe4c36f43289c47a ""
   "section/7_Dati_e_Calcoli.tex" 1648208820 3894 cc12fe55b703425c1a67eac0d6281d9a ""

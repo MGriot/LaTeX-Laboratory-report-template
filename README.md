@@ -1,4 +1,21 @@
 # Template-relazione-LaTex
+ <p align="center">
+    <a href="https://github.comMGriot/Template-relazione-LaTex/releases">
+      <img src="https://img.shields.io/github/downloads/MGriot/Template-relazione-LaTex/total" alt="Downloads">
+    </a>
+    <a href="https://github.com/MGriot/Template-relazione-LaTex/">
+      <img src="https://img.shields.io/github/contributors/MGriot/Template-relazione-LaTex?color=dark-green" alt="Contributors">
+    </a>
+    <a href="https://github.com/MGriot/Template-relazione-LaTex/version/">
+      <img src="https://img.shields.io/github/v/release/MGriot/Template-relazione-LaTex?label=version" alt="Version">
+    </a>
+    <a href="https://github.com/MGriot/Template-relazione-LaTex/issues/">
+      <img src="https://img.shields.io/github/issues/MGriot/Template-relazione-LaTex" alt="Issues">
+    </a>
+    <a href="https://github.com/MGriot/Template-relazione-LaTex/blob/master/LICENSE">
+      <img src="https://img.shields.io/github/license/MGriot/Template-relazione-LaTex" alt="License">
+    </a>
+  </p>
 
 - [Template-relazione-LaTex](#template-relazione-latex)
   - [Introduzione](#introduzione)
