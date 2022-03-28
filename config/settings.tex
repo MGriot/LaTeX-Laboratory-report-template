@@ -1,4 +1,4 @@
-%File con config utili allo stile della relazione, in linea di massima qua non devi toccare nulla
+%File con config utili allo stile della relazione
 %Nome e Cognome 
 \def \nome {Nome}
 \def \cognome {Cognome}
@@ -40,7 +40,7 @@
 \newcommandx{\improvement}[2][1=]{\todo[linecolor=green,backgroundcolor=green!25,bordercolor=green,#1]{#2}}
 \newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
 
-%per flowchart
+%flowchart
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
 \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
 \tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
@@ -50,13 +50,13 @@
 
 \usetikzlibrary{shapes.geometric, arrows, calc, patterns, positioning}%per flowchart
 
-%per frasi H e P
+%frasi H e P
 \input{config/H_P_command}
 
 %set title and author in pdf information
 \hypersetup{pdftitle={Template Example}, pdfauthor={\cognome \nome}}
 
-%aggiunge il file di bibliografia per fare le citazioni
+%bibliography
 \addbibresource{bibliography.bib} %Import the bibliography file
 
 
