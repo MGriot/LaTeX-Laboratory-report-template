@@ -1,23 +1,23 @@
-# Template-relazione-LaTeX
+# Relation-Template-LaTeX
  <p align="center">
-    <a href="https://github.comMGriot/Template-relazione-LaTex/releases">
-      <img src="https://img.shields.io/github/downloads/MGriot/Template-relazione-LaTex/total" alt="Downloads">
+    <a href="https://github.comMGriot/Relation-Template-LaTeX/releases">
+      <img src="https://img.shields.io/github/downloads/MGriot/Relation-Template-LaTeX/total" alt="Downloads">
     </a>
-    <a href="https://github.com/MGriot/Template-relazione-LaTex/">
-      <img src="https://img.shields.io/github/contributors/MGriot/Template-relazione-LaTex?color=dark-green" alt="Contributors">
+    <a href="https://github.com/MGriot/Relation-Template-LaTeX/">
+      <img src="https://img.shields.io/github/contributors/MGriot/Relation-Template-LaTeX?color=dark-green" alt="Contributors">
     </a>
-    <a href="https://github.com/MGriot/Template-relazione-LaTex/version/">
-      <img src="https://img.shields.io/github/v/release/MGriot/Template-relazione-LaTex?label=version" alt="Version">
+    <a href="https://github.com/MGriot/Relation-Template-LaTeX/version/">
+      <img src="https://img.shields.io/github/v/release/MGriot/Relation-Template-LaTeX?label=version" alt="Version">
     </a>
-    <a href="https://github.com/MGriot/Template-relazione-LaTex/issues/">
-      <img src="https://img.shields.io/github/issues/MGriot/Template-relazione-LaTex" alt="Issues">
+    <a href="https://github.com/MGriot/Relation-Template-LaTeX/issues/">
+      <img src="https://img.shields.io/github/issues/MGriot/Relation-Template-LaTeX" alt="Issues">
     </a>
-    <a href="https://github.com/MGriot/Template-relazione-LaTex/blob/master/LICENSE">
-      <img src="https://img.shields.io/github/license/MGriot/Template-relazione-LaTex" alt="License">
+    <a href="https://github.com/MGriot/Relation-Template-LaTeX/blob/master/LICENSE">
+      <img src="https://img.shields.io/github/license/MGriot/Relation-Template-LaTeX" alt="License">
     </a>
   </p>
 
-- [Template-relazione-LaTeX](#template-relazione-latex)
+- [Relation-Template-LaTeX](#relation-template-latex)
 - [Installazione](#installazione)
 - [Template](#template)
   - [Introduzione](#introduzione)
@@ -30,7 +30,7 @@
 
 
 Questo che vedete è un template per scrivere le relazioni di laboratorio in LaTex, ha un impronta prevalentemente chimica ma può essere adattato a qualsiasi esigenza.
-Un esempio di questo template è disponibile a [Template_relazioni](https://github.com/MGriot/Template-relazione-LaTex/blob/master/.out/main.pdf).
+Un esempio di questo template è disponibile a [Template_relazioni](https://github.com/MGriot/Relation-Template-LaTeX/blob/master/.out/main.pdf).
 
 Questa guida però non vuole essere un tutorial su come si scriva in LaTex e quindi da per scontato che sappiate come si scrive un file LaTex.
 # Installazione
