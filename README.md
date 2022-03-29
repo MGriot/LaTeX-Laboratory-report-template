@@ -1,4 +1,4 @@
-# Template-relazione-LaTex
+# Template-relazione-LaTeX
  <p align="center">
     <a href="https://github.comMGriot/Template-relazione-LaTex/releases">
       <img src="https://img.shields.io/github/downloads/MGriot/Template-relazione-LaTex/total" alt="Downloads">
@@ -17,7 +17,9 @@
     </a>
   </p>
 
-- [Template-relazione-LaTex](#template-relazione-latex)
+- [Template-relazione-LaTeX](#template-relazione-latex)
+- [Installazione](#installazione)
+- [Template](#template)
   - [Introduzione](#introduzione)
   - [main.tex](#maintex)
   - [settings.tex](#settingstex)
@@ -31,6 +33,9 @@ Questo che vedete è un template per scrivere le relazioni di laboratorio in LaT
 Un esempio di questo template è disponibile a [Template_relazioni](https://github.com/MGriot/Template-relazione-LaTex/blob/master/.out/main.pdf).
 
 Questa guida però non vuole essere un tutorial su come si scriva in LaTex e quindi da per scontato che sappiate come si scrive un file LaTex.
+# Installazione
+
+# Template
 ## Introduzione
 
 Il template è strutturato in maniera da poter scrivere comodamente una relazione suddividendo ogni sezione in un file diverso collocato nella cartella `section`.

@@ -1756,7 +1756,7 @@ INPUT .\img\GitHub\qrcode_github.com.png
 INPUT .\img\GitHub\qrcode_github.com.png
 INPUT img\GitHub\qrcode_github.com.png
 INPUT .\img\GitHub\qrcode_github.com.png
-INPUT D:\Programs\MiKTeX\fonts\tfm\public\cm\cmti12.tfm
+INPUT D:\Programs\MiKTeX\fonts\tfm\public\cm\cmti9.tfm
 INPUT .\section\6_Reazioni.tex
 INPUT .\section\6_Reazioni.tex
 INPUT .\section\6_Reazioni.tex
@@ -1776,6 +1776,7 @@ INPUT .\img\GitHub\qrcode_github.com.png
 INPUT img\GitHub\qrcode_github.com.png
 INPUT .\img\GitHub\qrcode_github.com.png
 INPUT D:\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT D:\Programs\MiKTeX\fonts\tfm\public\cm\cmti12.tfm
 INPUT .\img\GitHub\qrcode_github.com.png
 INPUT .\img\GitHub\qrcode_github.com.png
 INPUT img\GitHub\qrcode_github.com.png
@@ -1811,7 +1812,6 @@ INPUT .\img\GitHub\qrcode_github.com.png
 INPUT img\GitHub\qrcode_github.com.png
 INPUT .\img\GitHub\qrcode_github.com.png
 INPUT D:\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm0900.tfm
-INPUT D:\Programs\MiKTeX\fonts\tfm\public\cm\cmti9.tfm
 INPUT .\img\GitHub\qrcode_github.com.png
 INPUT .\img\GitHub\qrcode_github.com.png
 INPUT img\GitHub\qrcode_github.com.png
@@ -1920,6 +1920,10 @@ INPUT .\img\GitHub\qrcode_github.com.png
 INPUT d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.tdo
 INPUT d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.tdo
 INPUT d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.tdo
+INPUT .\img\GitHub\qrcode_github.com.png
+INPUT .\img\GitHub\qrcode_github.com.png
+INPUT img\GitHub\qrcode_github.com.png
+INPUT .\img\GitHub\qrcode_github.com.png
 OUTPUT d:\Documenti_personali\Programming\LaTex\Template-relazione-LaTex\.out\main.tdo
 INPUT .\img\GitHub\qrcode_github.com.png
 INPUT .\img\GitHub\qrcode_github.com.png
