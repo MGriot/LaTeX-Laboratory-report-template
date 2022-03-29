@@ -1,6 +1,7 @@
 # Relation-Template-LaTeX
+
  <p align="center">
-    <a href="https://github.comMGriot/Relation-Template-LaTeX/releases">
+    <a href="https://github.com/MGriot/Relation-Template-LaTeX/releases">
       <img src="https://img.shields.io/github/downloads/MGriot/Relation-Template-LaTeX/total" alt="Downloads">
     </a>
     <a href="https://github.com/MGriot/Relation-Template-LaTeX/">
