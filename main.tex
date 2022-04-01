@@ -1,12 +1,32 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University/School Laboratory Report
+% LaTeX Template
+% Version X.X (March xx, 202X)
+%
+% This class originates from:
+% https://github.com/MGriot/Relation-Template-LaTeX
+%
+% Authors:
+% MGriot
+%
+% License:
+% GPL-3.0 (https://github.com/MGriot/Relation-Template-LaTeX/blob/master/LICENSE)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \documentclass[a4paper]{article}
 
 \input{config/package} %package utilizzati per il documento
 \input{config/settings} %file con settaggi
 
+\input{config/preset/preset_1a} %add preset for title and date, alternatively you can use preset_2a
+
 \begin{document}
 \maketitle %crea il titolo
 
-\input{section/0_Sommario} %da eleiminare
+%\input{config/preset/preset_2b} %add preset_2b
+
+\input{section/Sommario} %da eleiminare
 \input{section/1_Obbiettivo}
 \input{section/2_Principio_del_metodo}
 \input{section/3_Strumenti}
@@ -19,7 +39,7 @@
 \input{section/10_H_e_P_frasi}
 
 \newpage
-\input{section/link_utili}%link utili, elimina
+\input{section/link_utili} %link utili, elimina
 \newpage
 \input{section/esempi} %parte di esempi per immagini o formule, elimina pure dopo aver scritto la relazione.
 \end{document}

@@ -1,24 +1,26 @@
-# Relation-Template-LaTeX
+# LaTeX Scientific Report Template
 
  <p align="center">
-    <a href="https://github.com/MGriot/Relation-Template-LaTeX/releases">
-      <img src="https://img.shields.io/github/downloads/MGriot/Relation-Template-LaTeX/total" alt="Downloads">
+    <a href="https://github.com/MGriot/LaTeX-Scientific-Report-Template/releases">
+      <img src="https://img.shields.io/github/downloads/MGriot/LaTeX-Scientific-Report-Template/total" alt="Downloads">
     </a>
-    <a href="https://github.com/MGriot/Relation-Template-LaTeX/">
-      <img src="https://img.shields.io/github/contributors/MGriot/Relation-Template-LaTeX?color=dark-green" alt="Contributors">
+    <a href="https://github.com/MGriot/LaTeX-Scientific-Report-Template/">
+      <img src="https://img.shields.io/github/contributors/MGriot/LaTeX-Scientific-Report-Template?color=dark-green" alt="Contributors">
     </a>
-    <a href="https://github.com/MGriot/Relation-Template-LaTeX/version/">
-      <img src="https://img.shields.io/github/v/release/MGriot/Relation-Template-LaTeX?label=version" alt="Version">
+    <a href="https://github.com/MGriot/LaTeX-Scientific-Report-Template/version/">
+      <img src="https://img.shields.io/github/v/release/MGriot/LaTeX-Scientific-Report-Template?label=version" alt="Version">
     </a>
-    <a href="https://github.com/MGriot/Relation-Template-LaTeX/issues/">
-      <img src="https://img.shields.io/github/issues/MGriot/Relation-Template-LaTeX" alt="Issues">
+    <a href="https://img.shields.io/github/repo-size/MGriot/LaTeX-Scientific-Report-Template.svg"><img src="https://img.shields.io/github/repo-size/MGriot/LaTeX-Scientific-Report-Template.svg">
     </a>
-    <a href="https://github.com/MGriot/Relation-Template-LaTeX/blob/master/LICENSE">
-      <img src="https://img.shields.io/github/license/MGriot/Relation-Template-LaTeX" alt="License">
+    <a href="https://github.com/MGriot/LaTeX-Scientific-Report-Template/issues/">
+      <img src="https://img.shields.io/github/issues/MGriot/LaTeX-Scientific-Report-Template" alt="Issues">
+    </a>
+    <a href="https://github.com/MGriot/LaTeX-Scientific-Report-Template/blob/master/LICENSE">
+      <img src="https://img.shields.io/github/license/MGriot/LaTeX-Scientific-Report-Template" alt="License">
     </a>
   </p>
 
-- [Relation-Template-LaTeX](#relation-template-latex)
+- [LaTeX Scientific Report Template](#latex-scientific-report-template)
 - [Installazione](#installazione)
 - [Template](#template)
   - [Introduzione](#introduzione)
@@ -29,25 +31,38 @@
   - [img/](#img)
   - [section/](#section)
 
-
 Questo che vedete è un template per scrivere le relazioni di laboratorio in LaTex, ha un impronta prevalentemente chimica ma può essere adattato a qualsiasi esigenza.
-Un esempio di questo template è disponibile a [Template_relazioni](https://github.com/MGriot/Relation-Template-LaTeX/blob/master/.out/main.pdf).
+Un esempio di questo template è disponibile [qui](https://github.com/MGriot/LaTeX-Scientific-Report-Template/blob/master/.out/main.pdf).
 
 Questa guida però non vuole essere un tutorial su come si scriva in LaTex e quindi da per scontato che sappiate come si scrive un file LaTex.
+
 # Installazione
 
+1. First you'll need LaTeX. Instructions on obtaining it can be found here:
+   <http://latex-project.org/ftp.html>
+1. Download this package from release section or `Code -> Download zip` and unzip the directory
+1. Compiling from the command line will look like the following:
+
+   ```bash
+   $ latexmk main.tex
+   ```
+
+1. Or you can use [TeXShop][texshop] or a similar native client to typeset the
+   LaTeX file or an online editor such [Overleaf](https://it.overleaf.com/)
+
 # Template
+
 ## Introduzione
 
 Il template è strutturato in maniera da poter scrivere comodamente una relazione suddividendo ogni sezione in un file diverso collocato nella cartella `section`.
 Ci sono però dei file di più grande importanza che vengono elencati qua sotto e affrontati in una sezione apposita uno per volta.
 
-* `main`
-* `config/settings`
-* `config/package`
-* `bibliography`
-* `img/`
-* `section/`
+- `main`
+- `config/settings`
+- `config/package`
+- `bibliography`
+- `img/`
+- `section/`
 
 ## main.tex
 
@@ -259,19 +274,19 @@ Per le immagini viene utilizzata una cartella in cui vengono raccolte in modo da
 Risulta essere il cuore pulsante della relazione, in questa cartella sono racchiusi i file che compongono la relazione.
 Al suo interno vengono ospitati diversi file:
 
-* 0_Sommario -> generalmente lo puoi ignorare, in alternativa può sostituire l'obbiettivo
-* 1_Obbiettivo
-* 2_Principio del metodo
-* 3_Strumenti
-* 4_Reagenti
-* 5_Procedimento
-* 6_Reazioni
-* 7_Dati e Calcoli
-* 8_Conclusioni
-* 9_bibliografia
-* 10_H e P frasi
-* esempi
-* link utili
+- 0_Sommario -> generalmente lo puoi ignorare, in alternativa può sostituire l'obbiettivo
+- 1_Obbiettivo
+- 2_Principio del metodo
+- 3_Strumenti
+- 4_Reagenti
+- 5_Procedimento
+- 6_Reazioni
+- 7_Dati e Calcoli
+- 8_Conclusioni
+- 9_bibliografia
+- 10_H e P frasi
+- esempi
+- link utili
 
 La speigazione dei file 1_Obbiettivo a 9_Bibliografia vengono riportate nei file stessi e nel pdf di esmpio che puoi recuperare sopra.
 

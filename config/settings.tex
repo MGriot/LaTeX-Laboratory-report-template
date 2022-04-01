@@ -1,7 +1,12 @@
-%File con config utili allo stile della relazione
+%----------------------------------------------------------------------------------------
+%	DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
 %Nome e Cognome 
-\def \nome {Nome}
-\def \cognome {Cognome}
+\def \nome {Nome} %Name
+\def \cognome {Cognome} %Surname
+\def \deliverydate {\today} %Delivery date
+\def \performeddate {\today} %Performed date
 
 %page border and dimension
 \geometry{a4paper,top=3cm,bottom=3cm,left=3cm,right=3cm}
@@ -10,18 +15,16 @@
 \pagestyle{fancy}
 \fancypagestyle{plain}{} %prima pagina uguale alle altre
 \fancyhf{}
-\rhead{\nome \ \cognome \\ Data consegna: xxxx}
-\lhead{Relazione n° x \\ Classe: XE}
+\rhead{\nome \ \cognome \\ Classe: XE}
+\lhead{Relazione n° x \\ Data consegna: \deliverydate}
 \rfoot{Pag. \thepage \hspace{1pt} di \pageref{LastPage}}
-\lfoot{\includegraphics[scale=0.1]{img/GitHub/qrcode_github.com.png} Template \LaTeX \;di M.Griot}
+\lfoot{\includegraphics[scale=0.1]{img/GitHub/qrcode_github.png} Template \LaTeX \;di M.Griot}
 \setlength{\headheight}{22.54448pt}
 \setlength{\footskip}{41.84514pt}
 
-
 %titolo e data
 \title{Laboratorio di xxxx \\ \huge{Template relazioni}} % al posto di xxxx va il nome della materia, in huge va il titolo dell'esperienza
-\author{\nome \ \cognome}
-\date{\today} %metti la data di quando hai fatto l'esperienza, (\today)
+\author{\nome \ \cognome} % Author name(s), add additional authors like: '\& Name Surname'
 
 %noindent, se abilitata toglie l'identazione in tutto il documento
 %\setlength{\parindent}{0pt}
