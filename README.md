@@ -21,7 +21,7 @@
   </p>
 
 - [LaTeX Scientific Report Template](#latex-scientific-report-template)
-- [Installazione](#installazione)
+- [Setup](#setup)
 - [Template](#template)
   - [Introduzione](#introduzione)
   - [main.tex](#maintex)
@@ -36,19 +36,15 @@ Un esempio di questo template è disponibile [qui](https://github.com/MGriot/LaT
 
 Questa guida però non vuole essere un tutorial su come si scriva in LaTex e quindi da per scontato che sappiate come si scrive un file LaTex.
 
-# Installazione
-
-1. First you'll need LaTeX. Instructions on obtaining it can be found here:
-   <http://latex-project.org/ftp.html>
-1. Download this package from release section or `Code -> Download zip` and unzip the directory
-1. Compiling from the command line will look like the following:
-
-   ```bash
-   $ latexmk main.tex
-   ```
-
-1. Or you can use [TeXShop][texshop] or a similar native client to typeset the
-   LaTeX file or an online editor such [Overleaf](https://it.overleaf.com/)
+# Setup
+1. Per prima cosa serve un compilatore LaTeX, si può lavorare off-line o on-line:
+   * **online**:
+      - you can use [TeXShop][texshop] or a similar native client to typeset the
+   LaTeX file or an online editor such [Overleaf](https://it.overleaf.com/);
+    * **offline**:
+      * le istruzioni per ottenerlo possono essere trovate qui: <http://latex-project.org/ftp.html>;
+1. Scaricare questo pacchetto attraverso la sezione release o in alternativa `Code -> Download zip` e unzippare:
+1. Compilare il documento attraverso il file `main.tex`, fulcro del template contenuto all'interno della cartella scaicata.
 
 # Template
 
@@ -274,7 +270,7 @@ Per le immagini viene utilizzata una cartella in cui vengono raccolte in modo da
 Risulta essere il cuore pulsante della relazione, in questa cartella sono racchiusi i file che compongono la relazione.
 Al suo interno vengono ospitati diversi file:
 
-- 0_Sommario -> generalmente lo puoi ignorare, in alternativa può sostituire l'obbiettivo
+- 0_Sommario
 - 1_Obbiettivo
 - 2_Principio del metodo
 - 3_Strumenti
