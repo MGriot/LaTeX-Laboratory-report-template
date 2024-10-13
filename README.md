@@ -23,7 +23,7 @@
 - [LaTeX Scientific Report Template](#latex-scientific-report-template)
 - [Setup](#setup)
 - [Template](#template)
-  - [Introduzione](#introduzione)
+  - [Introduction](#introduction)
   - [main.tex](#maintex)
   - [settings.tex](#settingstex)
   - [package.tex](#packagetex)
@@ -31,103 +31,100 @@
   - [img/](#img)
   - [section/](#section)
 
-Questo che vedete è un template per scrivere le relazioni di laboratorio in LaTex, ha un impronta prevalentemente chimica ma può essere adattato a qualsiasi esigenza.
-Un esempio di questo template è disponibile [qui](https://github.com/MGriot/LaTeX-Scientific-Report-Template/blob/master/.out/main.pdf).
+This is a template for writing laboratory reports in LaTeX. It has a predominantly chemical footprint but can be adapted to any need.
+An example of this template is available [here](https://github.com/MGriot/LaTeX-Scientific-Report-Template/blob/master/.out/main.pdf).
 
-Questa guida però non vuole essere un tutorial su come si scriva in LaTex e quindi da per scontato che sappiate come si scrive un file LaTex.
+This guide, however, is not intended to be a tutorial on how to write in LaTeX, so it assumes that you know how to write a LaTeX file.
 
 # Setup
-1. Per prima cosa serve un compilatore LaTeX, si può lavorare off-line o on-line:
+1. First, you need a LaTeX compiler. You can work offline or online:
    * **online**:
       - you can use [TeXShop][texshop] or a similar native client to typeset the
    LaTeX file or an online editor such [Overleaf](https://it.overleaf.com/);
     * **offline**:
-      * le istruzioni per ottenerlo possono essere trovate qui: <http://latex-project.org/ftp.html>;
-1. Scaricare questo pacchetto attraverso la sezione release o in alternativa `Code -> Download zip` e unzippare:
-1. Compilare il documento attraverso il file `main.tex`, fulcro del template contenuto all'interno della cartella scaicata.
+      * instructions for obtaining it can be found here: <http://latex-project.org/ftp.html>;
+1. Download this package through the release section or alternatively `Code -> Download zip` and unzip:
+1. Compile the document through the `main.tex` file, the heart of the template contained within the downloaded folder.
 
 # Template
 
-## Introduzione
+## Introduction
 
-Il template è strutturato in maniera da poter scrivere comodamente una relazione suddividendo ogni sezione in un file diverso collocato nella cartella `section`.
-Ci sono però dei file di più grande importanza che vengono elencati qua sotto e affrontati in una sezione apposita uno per volta.
+The template is structured in such a way that you can comfortably write a report by dividing each section into a different file located in the `section` folder.
+However, there are some files of greater importance that are listed below and addressed in a separate section one by one.
 
-- `main`
-- `config/settings`
-- `config/package`
-- `bibliography`
+- `main.tex`
+- `config/settings.tex`
+- `config/package.tex`
+- `bibliography.bib`
 - `img/`
 - `section/`
 
 ## main.tex
 
-In questo file, cuore pulsante del template trovi nelle prime righe:
+In this file, the beating heart of the template, you will find in the first few lines:
 
-```LaTex
-\documentclass[a4paper]{article} %struttura del file
+```LaTeX
+\documentclass[a4paper]{article} %file structure
 \usepackage[utf8]{inputenc}
 
-\input{config/package} %package utilizzati
-\input{config/settings} %file con settaggi
+\input{config/package} %packages used
+\input{config/settings} %file with settings
 ```
 
-`\input{config/package}` indica dove sono collocati tutti i package utilizzati per la costruzione del file di output, è da modificare solo se si sa cosa si sta facendo perchè l'eleiminazione dei pacchetti può compromettere la corretta composizione del `main.tex`.
+`\input{config/package}` indicates where all the packages used to build the output file are located. It should only be modified if you know what you are doing because removing packages may compromise the correct composition of `main.tex`.
 
-`\input{config/settings}` è invece la parte che dà lo stile al file finale, qui sono contenute le impostazioni, i comandi e le impostazioni dei pacchetti usati. Verrà analizzato nel dettaglio in una sezione apposita.
+`\input{config/settings}` is the part that styles the final file. This is where the settings, commands and settings of the packages used are contained. It will be analysed in detail in a separate section.
 
-Continuando a scorrere il file ci si imbatte in:
+Continuing to scroll through the file, you come across:
 
 ```LaTex
-%Nome e Cognome 
-\def \nome {Nome}
-\def \cognome {Cognome}
+%Name and Surname 
+\def \nome {Name}
+\def \cognome {Surname}
 
-%titolo e data
-\title{Laboratorio di xxxx \\ \huge{Template relazioni}}
+%title and data
+\title{Laboratory of xxxx \\ \huge{Report Template}}
 \author{\nome \ \cognome}
 \date{\today}
+
 ```
 
-In `\def \nome {Nome}` e `\def \cognome {Cognome}`, al posto di Nome  e Cognome dentro parentesi graffe "`{}`" va messo il nome e il cognome dell'autore del documento. Questo andrà a collocare il nome e cognome dell'autore in tutte le parti in cui è necessario all'interno del documento.
+In `\def \nome {Nome}` e `\def \cognome {Surname}`, replace Name and Surname in curly braces "{}" with the first and last name of the document's author. This will place the author's first and last name wherever it is needed within the document.
 
-Per quanto riguarda `\title{Laboratorio di xxxx \\ \huge{Template relazioni}}` è il comando che permette la creazione del titolo, al posto di _"xxxx"_ va messo il nome della materia, in caso di necessità può essere cambiata tutta la parte _"Laboratorio di xxxx"_. Il secondo pezzo, invecem è il titolo vero e proprio e quindi bisogna sostituire _"Template relazioni"_ con il proprio titolo.
+`\title{Laboratory of xxxx \\ \huge{Report Template}}}` is the command that allows the title to be created. Replace "xxxx" with the name of the subject. If necessary, you can change the whole "Laboratory of xxxx" part. The second piece, however, is the actual title, so you need to replace "Report Template" with your own title.
 
-`\date{\today}` Inserisce la data di compilazione del file, generalmente però conviene mettere la data di svolgimento dell'esperienza che si vuole riportare.
+`\date{\today}` inserts the compilation date of the file, but it is generally advisable to put the date of the experience you want to report.
 
-Questa prima parte in particolare va a formare tutto quello che è racchiuso nel rettangolo in rosso nell'immagine sottostante:
+This first part in particular goes to form everything that is enclosed in the red rectangle in the image below:
 
 ![Titolo](img/GitHub/titolo.png)
 
-Subito dopo viene una parte importante che definisce la testatina e il piedipagina.
+Immediately afterwards comes an important part that defines the header and footer.
 
 ```LaTex
 %page style
 \pagestyle{fancy}
 \fancypagestyle{plain}{}
 \fancyhf{}
-\rhead{\nome \ \cognome \\ Data consegna: xxxx}
-\lhead{Relazione n° x \\ Classe: XE}
-\rfoot{Pag. \thepage \hspace{1pt} di \pageref{LastPage}}
-\lfoot{\includegraphics[scale=0.1]{img/GitHub/qrcode_github.com.png} Template \LaTeX \;di M.Griot}
+\rhead{\nome \ \cognome \\ Delivery date: xxxx}
+\lhead{Report No. x \\ Class: XE}
+\rfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+\lfoot{\includegraphics[scale=0.1]{img/GitHub/qrcode_github.com.png} LaTeX Template by M.Griot}
 \setlength{\headheight}{22.54448pt}
 ```
 
-`\rhead{\nome \ \cognome \\ Data consegna: xxxx}` si occupa di andare a mettere il nome e il cognome dell'autore, questa parte in automatico, e la data di consegna nella testatina del documento di ogni pagina. Per la data occorre mettere al posto di _"xxxx"_ la data di consegna della relazione. Questo serve per avere un tracciamento migliore dello svolgimento delle attività di laboratorio.
+- `\rhead{\nome \ \cognome \\ Data consegna: xxxx}` takes care of putting the author's name and surname, this part automatically, and the delivery date in the header of each page of the document. For the date you need to put the delivery date of the report instead of "xxxx". This is to keep better track of laboratory activities.
+- The line `\lhead{Report No. x \\ Class: XE}` allows you to write the report number. If you were to write more reports over time, you would need to replace "x" with the correct number. There is also the possibility to insert the class or course by changing "Class: XE" to yours.
+- `\rfoot{Page. \thepage \hspace{1pt} of \pageref{LastPage}}`, on the other hand, writes the page number in the right footer by putting the current page number and the total number of pages, useful if you are afraid that some sheets may be lost. It is advisable not to modify it too much.
+- `\lfoot{\includegraphics[scale=0.1]{img/GitHub/qrcode_github.com.png} Template \LaTeX \;di M.Griot}` is the penultimate line and creates a QRcode at the bottom left with the link to this page and indicates the author of the template. If you do not want this addition, simply delete the entire line. Of course, if you use this template, I would be happy if you would include the address of this page or the name of its author, but the decision is up to you!
+- The last line, `\setlength{\headheight}{22.54448pt}`, adjusts the height of the header and footer and is not recommended to be modified.
 
-La riga `\lhead{Relazione n° x \\ Classe: XE}` permette di srivere il numero della relazione, nel caso si scrivessero più relazioni nel corso del tempo, occorre sostituire _"x"_ con il numero corretto. Vi è anche la possibilità di inserire la classe o corso andado a modificare _"Classe: XE"_ con quella vostra.
-
-`\rfoot{Pag. \thepage \hspace{1pt} di \pageref{LastPage}}`, invece, va a scrivere il numero di pagina a pie di pagina destro mettendo il numero della pagina corrente e il numero totale di pagine, utile se si ha paura che alcuni fogli possano essere persi. Si consiglia di non modificare più di tanto.
-
-`\lfoot{\includegraphics[scale=0.1]{img/GitHub/qrcode_github.com.png} Template \LaTeX \;di M.Griot}` è la penultima riga e crea in basso a sinistra un QRcode con il link a questa pagina e indica l'autore del template. Nel caso non si voglia quest'aggiunta basta eliminare per intero la riga. Ovviamente, qualora venga utilizzato questo template fa piacere che venga riportato l'indirizzo di questa pagina o il nome del suo autore ma la decisione spetta a te!
-
-L'utlima riga, `\setlength{\headheight}{22.54448pt}`, sistema l'altezza della testatina e il pie di pagina e si consiglia di non modificare.
-
-Questa seconda parte va a formare tutto quello che è racchiuso nei rettangoli in rosso nell'immagine sottostante:
+This second part goes to form everything that is enclosed in the red rectangles in the image below:
 
 ![Testatina](img/GitHub/testatina_e_piedipagina.png)
 
-In ultimo viene la sezione del testo vero e proprio.
+Finally, there is the body text section.
 
 ```LaTex
 \hypersetup{pdftitle={Template Example}, pdfauthor={\cognome \; \nome}}
@@ -150,18 +147,16 @@ In ultimo viene la sezione del testo vero e proprio.
 \input{section/link_utili}
 \input{section/esempi}
 \end{document}
+
 ```
 
-La prima riga `\hypersetup{pdftitle={Template Example}, pdfauthor={\cognome \; \nome}}` serve per mostrare il nome del file e l'autore come proprietà del pdf generato.
-
-`\maketitle` consente di costruire la sezione di Titolo che prima abbiamo discusso. Non va cencellata altrimenti il titolo del documento sparirebbe.
-
-Tutte le righe comprese tra `\maketitle` e `\end{document}` sono tutte le sezioni che vengono importate per comporre il documento. Quelle che vedono un numero prima del nome, es `\input{section/1_Obbiettivo}`, sono da mantenere, in base alla necessità, mentre le ultime due righe si possono cancellare in quanto caricano del testo utile al Template ma inutile al fine di una relazione.
+- The first line `\hypersetup{pdftitle={Template Example}, pdfauthor={\cognome \; \nome}}` serves to display the file name and author as properties of the generated PDF.
+- `\maketitle` allows you to build the Title section we discussed earlier. Do not delete it or the document title will disappear.
+- All lines between `\maketitle` and `\end{document}` are all sections that are imported to compose the document. Those that see a number before the name, e.g. `\input{section/1_Obbiettivo}`, are to be kept, as needed, while the last two lines can be deleted as they load text that is useful to the Template but useless for the purpose of a report.
 
 ## settings.tex
 
-Questo file che si raggiunge tramite il percorso: `config/settings` è il file dedicato a tenere le informazioni e preferenze per la costruzione del documento.
-Le linee di codice che lo compongono sono poche e semplici.
+This file, which can be reached via the path: `config/settings`, is the file dedicated to holding the information and preferences for building the document. The lines of code that compose it are few and simple.
 
 ```LaTex
 %%%%%Colors
@@ -186,42 +181,36 @@ Le linee di codice che lo compongono sono poche e semplici.
 \tikzstyle{arrow} = [thick,->,>=stealth]
 \pgfplotsset{compat=1.18}
 
-%per frasi H e P
+%for H and P phrases
 \input{config/H_P_command}
 
-%aggiunge il file di bibliografia per fare le citazioni
+%adds the bibliography file for citations
 \addbibresource{bibliography.bib} %Import the bibliography file
+
 ```
 
-Le linee sotto a `%%%%%Colors` permettono di definire dei colori, possono essere aggiunti altri colori manualmente per personalizzare ulteriormente il proprio documento.
-
-Le linee sotto a `ToDo notes` permettono di definire dei marker all'interno del testo, utili per evidenziare lacune parti, scrivere degli appunti o degli allert come mostrato nelle figure sottostanti.
-![To-do note](img/GitHub/todo_note.png)
-![To-do note2](img/GitHub/todo_note2.png)
-
-Le linee sotto a `%per flowchart` sono per definire le impostazioni per costruire dei flowcart, in particolare le celle e le frecce. Possono essere modificati o aggiunte altre forme geometriche.
-![Flowchart](img/GitHub/flowchart.png)
-
-La riga `\input{config/H_P_command}` permette di importare un file che consente di scrivere le frasi P e H in maniera veloce e automatica all'interno della relazione scrivendo solo il numero di tali frasi.
-
-In ultimo la riga `\addbibresource{bibliography.bib}` ha il compito di importare il file contenente i dettagli della bibliografia in formato `.bib`
+- The lines below `%%%%%Colors` allow you to define colours. You can add other colours manually to further customise your document.
+- The lines below `ToDo notes` allow you to define markers within the text, useful for highlighting missing parts, writing notes or alerts as shown in the figures below.  
+- The lines below `%per flowchart` are for defining the settings for building flowcharts, in particular the cells and arrows. You can modify them or add other geometric shapes. 
+- The line `\input{config/H_P_command}` allows you to import a file that allows you to write the P and H phrases quickly and automatically within the report by writing only the number of such phrases.
+- Finally, the line `\addbibresource{bibliography.bib}` is responsible for importing the file containing the bibliography details in `.bib` format`
 
 ## package.tex
 
-E' il file adibito a contenere tutti i package utilizzati per questo documento. Qual'ora fosse necessario si possono aggiungere altri pacchetti.
+This is the file that contains all the packages used for this document. If necessary, other packages can be added.
 
 ```LaTex
-\usepackage[italian]{babel}%traduzione parti generate automaticamente
+\usepackage[italian]{babel}%translation of automatically generated parts
 \usepackage{geometry}
 \geometry{a4paper,top=3cm,bottom=3cm,left=1.5cm,right=1.5cm} %page  dimension
 \usepackage[fontsize=13pt]{scrextend} % for change the fontsize, different from article class
 \usepackage{fancyhdr}
-\usepackage{indentfirst} %identatione nella prima frase del paragrafo
+\usepackage{indentfirst} %indentation in the first sentence of the paragraph
 \usepackage{lastpage}
 \usepackage{xcolor}
 \usepackage{mdframed}
-\usepackage[version=4]{mhchem}%per formule e equazioni chimiche
-\usepackage{chemfig} %per formule 2D chimica
+\usepackage[version=4]{mhchem}%for chemical formulas and equations
+\usepackage{chemfig} %for 2D chemistry formulas
 \usepackage{modiagram} % molecular orbital diagrams
 \usepackage{wrapfig}
 \usepackage{pgfplots}
@@ -238,52 +227,51 @@ E' il file adibito a contenere tutti i package utilizzati per questo documento. 
 \usepackage{amsmath}
 \usepackage{booktabs}
 \usepackage{multicol}
-\usepackage[font=scriptsize]{caption}%per didascalia immagini
-\usepackage{xstring} % per creare p e h phrase command
+\usepackage[font=scriptsize]{caption}%per image captions
+\usepackage{xstring} % to create p and h phrase command
 \usepackage{csquotes}
-\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}%solo per le note, utile per prendere appunti, se aggiungi "disable" si tolgono tutti dal pdf ma possono rimanere nel testo.
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}%only for notes, useful for taking notes, if you add "disable" they are all removed from the pdf but can remain in the text.
 \usepackage{xargs} % Use more than one optional parameter in a new commands
-\usepackage[autocite=superscript,style=chem-acs,articletitle,doi,url]{biblatex}%bibliografia, usare il comando \autocite perchè venga usato lo stile american chemical society
+\usepackage[autocite=superscript,style=chem-acs,articletitle,doi,url]{biblatex}%bibliography, use the \autocite command to use the American Chemical Society style
 \usepackage{hyperref}%hyperlinks
+
 ```
 
-Non si analizzeranno tutti i pacchetti installati ma ci si soffermerà solo su alcuni.
+We will not analyse all the installed packages but will only focus on a few.
 
-`\geometry{a4paper,top=3cm,bottom=3cm,left=1.5cm,right=1.5cm}` permette di scegliere con maggiore libertà la struttura della pagina, in questo caso si da un margine superiore e inferiore di 3 cm e un margine laterale destro e sinistro di 1.5 cm. Ovviamente variando queti numeri si possono cambiare i margini per meglio adattarsi alle proprie esigenze.
-
-`\usepackage[fontsize=13pt]{scrextend}` permette di avere maggiore libertà nel cambio della dimensione del font senza dover sottostare alle rigide regole di LaTex, in questo caso si è scelta la dimensione 13 ma può essere cambiata in base alle esigenza.
-
-`\usepackage{indentfirst}` permette di identare anche le prime righe dopo i titoli di sezione, il suo uso dipende dal gusto personale.
-
-`\usepackage[autocite=superscript,style=chem-acs,articletitle,doi,url]{biblatex` imposta uno stile di citazione con _biblatex_ in linera con l'America Chemica Society, per usare questo stile bisogna usare il comando `\autocite` nel testo.
+- `\geometry{a4paper,top=3cm,bottom=3cm,left=1.5cm,right=1.5cm}` allows you to choose the page layout more freely, in this case giving a top and bottom margin of 3 cm and a right and left side margin of 1.5 cm. Of course, by varying these numbers you can change the margins to best suit your needs.
+- `\usepackage[fontsize=13pt]{scrextend}` allows you to have more freedom in changing the font size without having to comply with LaTeX's strict rules. In this case, size 13 was chosen, but it can be changed as needed.
+- `\usepackage{indentfirst}` allows you to indent even the first lines after section headings, its use depends on personal taste.
+- `\usepackage[autocite=superscript,style=chem-acs,articletitle,doi,url]{biblatex}` sets a citation style with biblatex in line with the America Chemical Society, to use this style you need to use the `\autocite` command in the text.
 
 ## bibliography.bib
 
-In questo file vengono conservati tutti i dati necesasri alle citazioni. Vederere la documentazione di _biblatex_ per maggiori informazioni.
+This file stores all the data required for citations. See the biblatex documentation for more information.
 
 ## img/
 
-Per le immagini viene utilizzata una cartella in cui vengono raccolte in modo da rendere la cartella di lavoro più ordinata e pulita. Si consiglia di collocare le immagini in questa cartella, con una propdia suddifisione, in modo da rendere il lavoro più ordinato.
+For the images, a folder is used where they are collected in order to make the working folder more tidy and clean. It is recommended that you place the images in this folder, with a proper subdivision, in order to make the work more orderly.
 
 ## section/
 
-Risulta essere il cuore pulsante della relazione, in questa cartella sono racchiusi i file che compongono la relazione.
-Al suo interno vengono ospitati diversi file:
+It is the beating heart of the report, this folder contains the files that make up the report. It contains several files:
 
-- 0_Sommario
-- 1_Obbiettivo
-- 2_Principio del metodo
-- 3_Strumenti
-- 4_Reagenti
-- 5_Procedimento
-- 6_Reazioni
-- 7_Dati e Calcoli
-- 8_Conclusioni
-- 9_bibliografia
-- 10_H e P frasi
-- esempi
-- link utili
+- 0_Sommario (Summary)
+- 1_Obbiettivo (Objective)
+- 2_Principio del metodo (Principle of the method)
+- 3_Strumenti (Instruments)
+- 4_Reagenti (Reagents)
+- 5_Procedimento (Procedure)
+- 6_Reazioni (Reactions)
+- 7_Dati e Calcoli (Data and Calculations)
+- 8_Conclusioni (Conclusions)
+- 9_bibliografia (Bibliography)
+- 10_H e P frasi (H and P phrases)
+- esempi (Examples)
+- link utili (Useful Links)
 
-La speigazione dei file 1_Obbiettivo a 9_Bibliografia vengono riportate nei file stessi e nel pdf di esmpio che puoi recuperare sopra.
+The explanation of the files 1_Obbiettivo to 9_bibliografia are reported in the files themselves and in the sample pdf that you can retrieve above.
 
-I file `esempi` e `link utili` sono di assistrenza all'utente e non vanno mai incorporati nella relazione finale.
+The files `esempi` and `link utili` are for user assistance and should never be incorporated into the final report.
+
+This is an example of how to improve the README.md file by translating it into English and adding more explanations. Remember to keep your README file clear, concise, and easy to understand for users who are new to your project.
