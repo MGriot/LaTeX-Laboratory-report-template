@@ -9,7 +9,7 @@
 \def \performeddate {\today} %Performed date
 
 %page border and dimension
-\geometry{a4paper,top=3cm,bottom=3cm,left=3cm,right=3cm}
+\geometry{a4paper,top=3cm,bottom=3cm,left=1.5cm,right=1.5cm}
 
 %page style
 \pagestyle{fancy}
@@ -18,9 +18,9 @@
 \rhead{\nome \ \cognome \\ Classe: XE}
 \lhead{Relazione n° x \\ Data consegna: \deliverydate}
 \rfoot{Pag. \thepage \hspace{1pt} di \pageref{LastPage}}
-\lfoot{\includegraphics[scale=0.1]{img/GitHub/qrcode_github.png} Template \LaTeX \;di M.Griot}
+%\lfoot{\includegraphics[scale=0.1]{img/GitHub/qrcode_github.png} Template \LaTeX \;di M.Griot}
 \setlength{\headheight}{22.54448pt}
-\setlength{\footskip}{41.84514pt}
+\setlength{\footskip}{46.76381pt}
 
 %titolo e data
 \title{Laboratorio di xxxx \\ \huge{Template relazioni}} % al posto di xxxx va il nome della materia, in huge va il titolo dell'esperienza
@@ -43,15 +43,13 @@
 \newcommandx{\improvement}[2][1=]{\todo[linecolor=green,backgroundcolor=green!25,bordercolor=green,#1]{#2}}
 \newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
 
-%flowchart
-\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
-\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
-\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
-\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
-\tikzstyle{arrow} = [thick,->,>=stealth]
+%%%Flowchart
+\usetikzlibrary{shapes,arrows,calc, patterns,positioning,fit}%per flowchart
 \pgfplotsset{compat=1.18}
+\input{config/flowchart}
 
-\usetikzlibrary{shapes.geometric, arrows, calc, patterns, positioning}%per flowchart
+
+
 
 %frasi H e P
 \input{config/H_P_command}
@@ -63,4 +61,5 @@
 \addbibresource{bibliography.bib} %Import the bibliography file
 
 
-
+\newfloat{eqfloat}{h}{eqflts}
+\floatname{eqfloat}{Equation}

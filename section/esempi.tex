@@ -56,6 +56,31 @@
     \label{fig:5}
 \end{figure}
 
+\begin{figure}[h!]
+     \centering
+     \begin{subfigure}[b]{0.29\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/cipolla_safranina.jpg}
+         \caption{Cipolla con safranina}
+         \label{fig:y equals x}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.29\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/patata_H2O.jpg}
+         \caption{Buccia di patata con acqua}
+         \label{fig:three sin x}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.29\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/carota_H2O.jpg}
+         \caption{Carota in acqua}
+         \label{fig:five over x}
+     \end{subfigure}
+        \label{fig:three graphs}
+\end{figure}
+
 \newpage
 \subsection*{Formule chimiche}
 \begin{figure}[!ht]
@@ -176,23 +201,28 @@ Ecco invece un esempio di flowchart che potrebbe essere utile in certi procedime
 \begin{figure}[!ht]
     \begin{center}
         \begin{tikzpicture}[node distance=2cm] % per guida -> https://it.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ%3A_A_Tutorial_for_Beginners_(Part_3)%E2%80%94Creating_Flowcharts
-            \node (start) [startstop] {Inizio};
+            \node (start) [starter] {Inizio};
             \node (in1) [io, below of=start] {Ingresso};
             \node (pro1) [process, below of=in1] {Processo 1};
-            \node (dec1) [decision, below of=pro1,  yshift=-0.5cm] {Decsione 1};
+            \node (dec1) [decision, below of=pro1,  yshift=-0.5cm] {Decisione 1};
             \node (pro2a) [process, below of=dec1, yshift=-0.5cm] {Process 2a};
             \node (pro2b) [process, right of=dec1, xshift=2cm] {Process 2b};
             \node (out1) [io, below of=pro2a] {Output};
-            \node (stop) [startstop, below of=out1] {Stop};
+            \node (proc3a) [process, right of=out1, xshift=2cm] {Process 3a};
+            \node (process_longtext2) [process_longtext2.5, right of=proc3a , xshift=2cm, yshift=2cm]{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod interdum ornare.};
+            \node (stop) [terminator, below of=out1] {Stop};
             
-            \draw [arrow] (start) -- (in1);
-            \draw [arrow] (in1) -- (pro1);
-            \draw [arrow] (pro1) -- (dec1);
-            \draw [arrow] (dec1) -- node[anchor=east] {yes} (pro2a);
-            \draw [arrow] (dec1) -- node[anchor=south] {no} (pro2b);
-            \draw [arrow] (pro2b) |- (pro1); %per fare linea segmentata
-            \draw [arrow] (pro2a) -- (out1);
-            \draw [arrow] (out1) -- (stop);
+            \draw [arrow_stealth] (start) -- (in1);
+            \draw [arrow_stealth] (in1) -- (pro1);
+            \draw [arrow_stealth] (pro1) -- (dec1);
+            \draw [arrow_stealth] (dec1) -- node[anchor=east] {yes} (pro2a);
+            \draw [arrow_stealth] (dec1) -- node[anchor=south] {no} (pro2b);
+            \draw [arrow_stealth_rounded] (pro2b) |- (pro1); %per fare linea segmentata
+            \draw [arrow_latex] (pro2a) -- (out1);
+            \draw [line_rect] (out1) -- (proc3a);
+            \draw [duble_arrow_latex] (proc3a) -- (process_longtext2);
+            \draw [duble_arrow_latex] (process_longtext2) |- (stop);
+            \draw [arrow_latex] (out1) -- (stop);
         \end{tikzpicture}
     \end{center}
 \end{figure}

@@ -1,0 +1,83 @@
+
+%%%%% node for flowchart
+%flowchart ->https://www.smartdraw.com/flowchart/flowchart-symbols.htm
+
+%https://www.gliffy.com/blog/guide-to-flowchart-symbols
+%https://tikz.dev/
+
+%Start/End Symbol
+\tikzstyle{starter} = [shape=rounded rectangle, rounded corners, minimum height=2em, minimum width=2cm, minimum height=1cm,text centered, draw=black]
+\tikzstyle{terminator} = [shape=rounded rectangle, rounded corners, minimum height=2em, minimum width=2cm, minimum height=1cm,text centered, draw=black]
+\tikzstyle{terminator_longtext2} = [shape=rounded rectangle, rounded corners, minimum height=2em, minimum width=2cm, minimum height=1cm, text width=2.5cm, text centered, draw=black]
+
+%Action or Process Symbol
+\tikzstyle{process} = [rectangle, minimum width=2cm, minimum height=2em, text centered, draw=black]
+\tikzstyle{process_longtext2}=[rectangle, minimum width=2cm, minimum height=2em, text centered, draw=black,text width=2cm]
+\tikzstyle{process_longtext2.5}=[rectangle, minimum width=2cm, minimum height=2em, text centered, draw=black,text width=2.5cm]
+
+%Document Symbol
+
+%Multiple Documents Symbol Non funziona
+\tikzstyle{multiple_document} = [tape, fill=white, tape bend top=none, minimum width=1.5cm, minimum height=1em, text centered, draw=black, double copy shadow]
+
+%Decision Symbol
+\tikzstyle{decision} = [diamond, minimum width=2cm, minimum height=2em, text centered, draw=black]
+
+%Input/Output Symbol
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, minimum height=1em, text centered, draw=black]
+
+%Manual Input Symbol
+\tikzstyle{manual_input} = [trapezium,shape border rotate=90,trapezium left angle=90,trapezium right angle=80, minimum width=1.5cm, minimum height=1em, text centered, draw=black]
+
+%Preparation Symbol
+
+%Connector Symbol
+
+%Or Symbol
+
+%Summoning Junction Symbol
+
+%Merge Symbol
+
+%Collate Symbol
+
+%Sort Symbol
+
+%Subroutine Symbol
+
+%Manual Loop Symbol
+
+%Loop Limit Symbol
+
+%Delay Symbol
+
+%Data Storage or Stored Data Symbol
+%simbolo sbagliato
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+
+%Database Symbol
+
+%Internal Storage Symbol
+
+%Display Symbol
+
+%Off Page
+
+%Ivisible node
+\tikzstyle{invisible_node} = [circle,inner sep=0pt,minimum size=0pt,draw=none]
+
+\pgfplotsset{compat=1.18}
+
+%%%% connector
+\tikzstyle{arrow_latex} = [draw, -latex']
+\tikzstyle{arrow_latex_rounded} = [rounded corners, -latex']
+\tikzstyle{duble_arrow_latex} = [draw, latex'-latex']
+\tikzstyle{arrow_stealth} = [thick,->,>=stealth]
+\tikzstyle{arrow_stealth_rounded} = [rounded corners, thick,->,>=stealth]
+\tikzstyle{duble_arrow_stealth} = [<->, stealth]
+%\tikzstyle{line} = [line] da sistemare
+\tikzstyle{line_rounded_corners} = [rounded corners]
+\tikzstyle{line_butt} = [line cap=butt]
+\tikzstyle{line_rect} = [line cap=rect]
+\tikzstyle{line_round} = [line cap=round]
+\tikzstyle{line_rounded_corners_dotted} = [rounded corners,dotted]
