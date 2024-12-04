@@ -1,10 +1,10 @@
-\contentsline {todo}{\color@fb@x {}{blue}{}{blue!25}{\leavevmode {\color {blue!25}o}}\ es. "Purificazione e ricristallizzazione dell'acido benzoico dopo averlo inquinato con carbone attivo."}{1}{section*.1}%
-\contentsline {todo}{\color@fb@x {}{blue}{}{blue!25}{\leavevmode {\color {blue!25}o}}\ es. la tolleranza e la portata della vetreria.}{2}{section*.2}%
-\contentsline {todo}{\color@fb@x {}{blue}{}{blue!25}{\leavevmode {\color {blue!25}o}}\ es. acido benzoico scheda di sicurezza.}{4}{section*.7}%
-\contentsline {todo}{\color@fb@x {}{blue}{}{blue!25}{\leavevmode {\color {blue!25}o}}\ es. Aggiungere la lega di di Devarda. \textit {Attenzione! Dopo l'aggiunta il contenuto della provetta raggiunge alte temperature, meglio svolgere l'operazione vicino ad un bancone e con una scarabattola per posare la provetta.}}{5}{section*.8}%
-\contentsline {todo}{\color@fb@x {}{blue}{}{blue!25}{\leavevmode {\color {blue!25}o}}\ Esempio di citazione.\blx@tocontentsinit {0}\autocite {einstein}}{8}{section*.10}%
-\contentsline {todo}{\color@fb@x {}{red}{}{red!25}{\leavevmode {\color {red!25}o}}\ Change this!}{16}{section*.43}%
-\contentsline {todo}{\color@fb@x {}{orange}{}{orange!25}{\leavevmode {\color {orange!25}o}}\ Change this!}{16}{section*.44}%
-\contentsline {todo}{\color@fb@x {}{blue}{}{blue!25}{\leavevmode {\color {blue!25}o}}\ This can help me in chapter seven!}{16}{section*.45}%
-\contentsline {todo}{\color@fb@x {}{green}{}{green!25}{\leavevmode {\color {green!25}o}}\ This really needs to be improved!\newline \newline What was I thinking?!}{16}{section*.46}%
-\contentsline {todo}{\color@fb@x {}{green}{}{green!25}{\leavevmode {\color {green!25}o}}\ The following section needs to be rewritten!}{17}{section*.47}%
+\contentsline {todo}{\fcolorbox {blue}{blue!25}{\textcolor {blue!25}{o}}\ example "Purification and recrystallization of benzoic acid after contaminating it with activated carbon."}{1}{section*.1}%
+\contentsline {todo}{\fcolorbox {blue}{blue!25}{\textcolor {blue!25}{o}}\ e.g. the tolerance and capacity of the glassware.}{2}{section*.2}%
+\contentsline {todo}{\fcolorbox {blue}{blue!25}{\textcolor {blue!25}{o}}\ es. acido benzoico scheda di sicurezza.}{4}{section*.7}%
+\contentsline {todo}{\fcolorbox {blue}{blue!25}{\textcolor {blue!25}{o}}\ e.g. Add Devarda's alloy. \textit {Warning! After the addition the content of the test tube reaches high temperatures, it is better to carry out the operation near a counter and with a crucible to place the test tube.}}{5}{section*.8}%
+\contentsline {todo}{\fcolorbox {blue}{blue!25}{\textcolor {blue!25}{o}}\ Esempio di citazione.\blx@tocontentsinit {0}\autocite {einstein}}{8}{section*.10}%
+\contentsline {todo}{\fcolorbox {red}{red!25}{\textcolor {red!25}{o}}\ Change this!}{17}{section*.44}%
+\contentsline {todo}{\fcolorbox {orange}{orange!25}{\textcolor {orange!25}{o}}\ Change this!}{17}{section*.45}%
+\contentsline {todo}{\fcolorbox {blue}{blue!25}{\textcolor {blue!25}{o}}\ This can help me in chapter seven!}{17}{section*.46}%
+\contentsline {todo}{\fcolorbox {green}{green!25}{\textcolor {green!25}{o}}\ This really needs to be improved!\newline \newline What was I thinking?!}{17}{section*.47}%
+\contentsline {todo}{\fcolorbox {green}{green!25}{\textcolor {green!25}{o}}\ The following section needs to be rewritten!}{18}{section*.48}%
