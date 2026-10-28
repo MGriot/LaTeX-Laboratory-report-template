@@ -1,0 +1,26 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.tdo
+*.toc
+*.lof
+*.lot
+*.xdv
+
+# Build directory: keep only the sample PDF
+.out/*
+!.out/main.pdf
+
+# Editors / tools
+.idea/
+.vscode/
+*.code-workspace
+indent.log

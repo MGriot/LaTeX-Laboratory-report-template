@@ -1,65 +1,104 @@
 %----------------------------------------------------------------------------------------
-%	DOCUMENT CONFIGURATIONS
+%	REPORT INFORMATION -- edit this block for every new report
 %----------------------------------------------------------------------------------------
 
-%Nome e Cognome 
-\def \nome {Nome} %Name
-\def \cognome {Cognome} %Surname
-\def \deliverydate {\today} %Delivery date
-\def \performeddate {\today} %Performed date
+\newcommand{\authorname}{Name}
+\newcommand{\authorsurname}{Surname}
+\newcommand{\course}{Laboratory of xxxx}     % subject / course name
+\newcommand{\reporttitle}{Report Template}   % title of the experiment
+\newcommand{\reportnumber}{x}                % progressive number of the report
+\newcommand{\classname}{XE}                  % class, group or course code
+\newcommand{\performeddate}{\today}          % date the experiment was performed
+\newcommand{\deliverydate}{\today}           % date the report is handed in
 
-%page border and dimension
-\geometry{a4paper,top=3cm,bottom=3cm,left=1.5cm,right=1.5cm}
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
 
-%page style
+\title{\course\\[0.3em] \huge\reporttitle}
+\author{\authorname\ \authorsurname} % more authors: \authorname\ \authorsurname \and Name Surname
+% The date is set by the preset loaded in main.tex (config/preset/).
+
+%----------------------------------------------------------------------------------------
+%	PAGE LAYOUT
+%----------------------------------------------------------------------------------------
+
+\geometry{a4paper, top=3cm, bottom=3cm, left=1.5cm, right=1.5cm,
+    marginparwidth=1.3cm, marginparsep=1mm} % margin notes must fit in the right margin
+
+% Uncomment to remove paragraph indentation from the whole document
+% \setlength{\parindent}{0pt}
+
+%----------------------------------------------------------------------------------------
+%	HEADER AND FOOTER
+%----------------------------------------------------------------------------------------
+
 \pagestyle{fancy}
-\fancypagestyle{plain}{} %prima pagina uguale alle altre
+\fancypagestyle{plain}{} % first page (title page) uses the same style as the others
 \fancyhf{}
-\rhead{\nome \ \cognome \\ Classe: XE}
-\lhead{Relazione n° x \\ Data consegna: \deliverydate}
-\rfoot{Pag. \thepage \hspace{1pt} di \pageref{LastPage}}
-%\lfoot{\includegraphics[scale=0.1]{img/GitHub/qrcode_github.png} Template \LaTeX \;di M.Griot}
-\setlength{\headheight}{22.54448pt}
+\fancyhead[L]{Report No.\ \reportnumber\\ Delivery date: \deliverydate}
+\fancyhead[R]{\authorname\ \authorsurname\\ Class: \classname}
+\fancyfoot[R]{Page \thepage\ of \pageref*{LastPage}}
+% Optional credit with a QR code linking to the template repository:
+% \fancyfoot[L]{\includegraphics[scale=0.1]{img/GitHub/qrcode_github.png}\ \LaTeX\ template by M.~Griot}
+\setlength{\headheight}{33pt}  % two-line header at 13pt
+\addtolength{\topmargin}{-9pt} % compensate the taller header
 \setlength{\footskip}{46.76381pt}
 
-%titolo e data
-\title{Laboratorio di xxxx \\ \huge{Template relazioni}} % al posto di xxxx va il nome della materia, in huge va il titolo dell'esperienza
-\author{\nome \ \cognome} % Author name(s), add additional authors like: '\& Name Surname'
+%----------------------------------------------------------------------------------------
+%	COLOURS
+%----------------------------------------------------------------------------------------
 
-%noindent, se abilitata toglie l'identazione in tutto il documento
-%\setlength{\parindent}{0pt}
+% Named with a prefix so that xcolor's standard red, blue, ... are not overwritten.
+\definecolor{notered}{RGB}{255,0,0}
+\definecolor{noteorange}{RGB}{255,165,0}
+\definecolor{noteblue}{RGB}{0,0,255}
+\definecolor{notegreen}{RGB}{143,206,0}
+\definecolor{linkblue}{RGB}{0,70,160}
 
-%%%%%Colors
-\definecolor{red}{RGB}{255,0,0}
-\definecolor{orange}{RGB}{255,165,0}
-\definecolor{blue}{RGB}{0,0,255}
-\definecolor{green}{RGB}{143,206,0}
+%----------------------------------------------------------------------------------------
+%	TODO NOTES
+%   Usage: \unsure{text}, \change{text}, \info{text}, \improvement{text};
+%   add [inline] to place the note in the text instead of the margin.
+%----------------------------------------------------------------------------------------
 
-%%%%%%%%%% ToDo notes
-% \usepackage[colorinlistoftodos,prependcaption,textsize=tiny,disable]{todonotes}
-\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
-\newcommandx{\change}[2][1=]{\todo[linecolor=orange,backgroundcolor=orange!25,bordercolor=orange,#1]{#2}}
-\newcommandx{\info}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
-\newcommandx{\improvement}[2][1=]{\todo[linecolor=green,backgroundcolor=green!25,bordercolor=green,#1]{#2}}
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=notered,backgroundcolor=notered!25,bordercolor=notered,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=noteorange,backgroundcolor=noteorange!25,bordercolor=noteorange,#1]{#2}}
+\newcommandx{\info}[2][1=]{\todo[linecolor=noteblue,backgroundcolor=noteblue!25,bordercolor=noteblue,#1]{#2}}
+\newcommandx{\improvement}[2][1=]{\todo[linecolor=notegreen,backgroundcolor=notegreen!25,bordercolor=notegreen,#1]{#2}}
 \newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
 
-%%%Flowchart
-\usetikzlibrary{shapes,arrows,calc, patterns,positioning,fit}%per flowchart
+%----------------------------------------------------------------------------------------
+%	UNITS, PLOTS AND FLOWCHARTS
+%----------------------------------------------------------------------------------------
+
+\sisetup{per-mode=symbol, separate-uncertainty}
+
+% Table column: centred, vertically middle-aligned paragraph of width #1, e.g. C{3cm}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 \pgfplotsset{compat=1.18}
+\usetikzlibrary{shapes.geometric, shapes.misc, shapes.symbols, shadows,
+    arrows.meta, calc, patterns, positioning, fit}
 \input{config/flowchart}
 
+%----------------------------------------------------------------------------------------
+%	GHS HAZARD (H) AND PRECAUTIONARY (P) STATEMENTS
+%----------------------------------------------------------------------------------------
 
+\input{config/ghs_phrases}
 
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY AND PDF METADATA
+%----------------------------------------------------------------------------------------
 
-%frasi H e P
-\input{config/H_P_command}
+\addbibresource{bibliography.bib}
 
-%set title and author in pdf information
-\hypersetup{pdftitle={Template Example}, pdfauthor={\cognome \nome}}
-
-%bibliography
-\addbibresource{bibliography.bib} %Import the bibliography file
-
-
-\newfloat{eqfloat}{h}{eqflts}
-\floatname{eqfloat}{Equation}
+\hypersetup{
+    pdftitle   = {\reporttitle},
+    pdfauthor  = {\authorname\ \authorsurname},
+    pdfsubject = {\course},
+    colorlinks = true,
+    linkcolor  = black,
+    citecolor  = black,
+    urlcolor   = linkblue,
+}

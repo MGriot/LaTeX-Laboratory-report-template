@@ -1,0 +1,20 @@
+\section{Reactions}
+Sometimes called \emph{Reaction mechanism}.
+
+If the experiment involves chemical reactions, write them down and explain them: this is one of the key parts of a chemistry report. Use the \verb|\ce{...}| command of the \texttt{mhchem} package for formulae and equations, and the \texttt{equation} environment to number them.
+
+\begin{equation}
+    \ce{2 H2O2 -> 2 H2O + O2 ^}
+    \label{eq:peroxide}
+\end{equation}
+
+Some \texttt{mhchem} examples:
+\begin{itemize}
+    \item ions and charges: \ce{SO4^2-}, \ce{[Cu(NH3)4]^2+};
+    \item equilibrium: \ce{H2O <=> H+ + OH-};
+    \item bonds: \ce{HC#CH}, \ce{H2C=CH2}, \ce{H3C-CH3};
+    \item conditions above the arrow: \ce{A ->[$\Delta$] B};
+    \item states of matter and precipitates: \ce{Ag+(aq) + Cl-(aq) -> AgCl(s) v}.
+\end{itemize}
+
+Refer to numbered reactions with \verb|\cref|: the decomposition in \cref{eq:peroxide} is catalysed by \ce{MnO2}.

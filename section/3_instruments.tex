@@ -1,0 +1,70 @@
+\section{Instruments}
+Sometimes called \emph{Equipment} or \emph{Apparatus}.
+
+List the glassware and instrumentation used, with the technical data that matter for the result: capacity, tolerance (or class) and sensitivity of the glassware, model and resolution of the instruments.
+\info[inline]{Example: burette, capacity \qty{25}{\milli\litre}, tolerance \qty{\pm 0.05}{\milli\litre}.}
+
+A bulleted list, nested if needed, groups the items clearly:
+\begin{itemize}
+    \item Instruments:
+          \begin{itemize}
+              \item microscope slide;
+              \item Bunsen burner;
+              \item inoculating loop;
+              \item wooden tongs;
+              \item burette, capacity \qty{25}{\milli\litre}, tolerance \qty{\pm 0.05}{\milli\litre};
+              \item \dots
+          \end{itemize}
+    \item Culture media:
+          \begin{itemize}
+              \item malt agar;
+              \item nutrient agar.
+          \end{itemize}
+    \item Dyes:
+          \begin{itemize}
+              \item methylene blue;
+              \item gentian violet.
+          \end{itemize}
+\end{itemize}
+
+When the list is long, two columns save space:
+\begin{multicols}{2}
+    \begin{itemize}
+        \item Instruments:
+              \begin{itemize}
+                  \item microscope slide;
+                  \item Bunsen burner;
+                  \item inoculating loop;
+                  \item wooden tongs;
+                  \item \dots
+              \end{itemize}
+        \item Culture media:
+              \begin{itemize}
+                  \item malt agar;
+                  \item nutrient agar.
+              \end{itemize}
+        \item Dyes:
+              \begin{itemize}
+                  \item methylene blue;
+                  \item gentian violet.
+              \end{itemize}
+    \end{itemize}
+\end{multicols}
+
+A table is another option (see \cref{tab:instruments}).
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{Instruments} & \textbf{Culture media} & \textbf{Dyes}  \\
+        \midrule
+        Microscope slide     & Malt agar              & Methylene blue \\
+        Bunsen burner        & Nutrient agar          & Gentian violet \\
+        Inoculating loop     &                        &                \\
+        Wooden tongs         &                        &                \\
+        \dots                &                        &                \\
+        \bottomrule
+    \end{tabular}
+    \caption{Instruments and materials used in the experiment.}
+    \label{tab:instruments}
+\end{table}

@@ -1,0 +1,30 @@
+\section*{Hazard and precautionary statements}
+
+If you prefer not to write the full H and P statements in the reagent tables, list them here. Complete lists are available from \href{https://pubchem.ncbi.nlm.nih.gov/ghs/}{PubChem} and \href{https://echa.europa.eu/regulations/clp/labelling}{ECHA}.
+
+The template includes the GHS statements in \texttt{config/ghs\_phrases.tex}, so the \LaTeX\ source stays short: write only the code, as in \verb|\Hphrase{H314}| or \verb|\Pphrase{P305+P351+P338}|, and the full text is printed for you.
+
+\begingroup
+\small
+\begin{multicols}{2}
+    \subsection*{Physical hazards}
+    \begin{itemize}
+        \item \Hphrase{H271}
+        \item \Hphrase{H290}
+    \end{itemize}
+    \subsection*{Health hazards}
+    \begin{itemize}
+        \item \Hphrase{H302}
+        \item \Hphrase{H314}
+        \item \Hphrase{H332}
+    \end{itemize}
+    \subsection*{Precautionary statements}
+    \begin{itemize}
+        \item \Pphrase{P210}
+        \item \Pphrase{P280}
+        \item \Pphrase{P301+P330+P331}
+        \item \Pphrase{P305+P351+P338}
+        \item \Pphrase{P501}
+    \end{itemize}
+\end{multicols}
+\endgroup
