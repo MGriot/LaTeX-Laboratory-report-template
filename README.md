@@ -1,277 +1,308 @@
 # LaTeX Scientific Report Template
 
- <p align="center">
-    <a href="https://github.com/MGriot/LaTeX-Scientific-Report-Template/releases">
-      <img src="https://img.shields.io/github/downloads/MGriot/LaTeX-Scientific-Report-Template/total" alt="Downloads">
-    </a>
-    <a href="https://github.com/MGriot/LaTeX-Scientific-Report-Template/">
-      <img src="https://img.shields.io/github/contributors/MGriot/LaTeX-Scientific-Report-Template?color=dark-green" alt="Contributors">
-    </a>
-    <a href="https://github.com/MGriot/LaTeX-Scientific-Report-Template/version/">
-      <img src="https://img.shields.io/github/v/release/MGriot/LaTeX-Scientific-Report-Template?label=version" alt="Version">
-    </a>
-    <a href="https://img.shields.io/github/repo-size/MGriot/LaTeX-Scientific-Report-Template.svg"><img src="https://img.shields.io/github/repo-size/MGriot/LaTeX-Scientific-Report-Template.svg">
-    </a>
-    <a href="https://github.com/MGriot/LaTeX-Scientific-Report-Template/issues/">
-      <img src="https://img.shields.io/github/issues/MGriot/LaTeX-Scientific-Report-Template" alt="Issues">
-    </a>
-    <a href="https://github.com/MGriot/LaTeX-Scientific-Report-Template/blob/master/LICENSE">
-      <img src="https://img.shields.io/github/license/MGriot/LaTeX-Scientific-Report-Template" alt="License">
-    </a>
-  </p>
+<p align="center">
+  <a href="https://github.com/MGriot/LaTeX-Scientific-Report-Template/releases"><img src="https://img.shields.io/github/downloads/MGriot/LaTeX-Scientific-Report-Template/total" alt="Downloads"></a>
+  <a href="https://github.com/MGriot/LaTeX-Scientific-Report-Template/graphs/contributors"><img src="https://img.shields.io/github/contributors/MGriot/LaTeX-Scientific-Report-Template?color=dark-green" alt="Contributors"></a>
+  <a href="https://github.com/MGriot/LaTeX-Scientific-Report-Template/releases/latest"><img src="https://img.shields.io/github/v/release/MGriot/LaTeX-Scientific-Report-Template?label=version" alt="Version"></a>
+  <a href="https://github.com/MGriot/LaTeX-Scientific-Report-Template"><img src="https://img.shields.io/github/repo-size/MGriot/LaTeX-Scientific-Report-Template" alt="Repository size"></a>
+  <a href="https://github.com/MGriot/LaTeX-Scientific-Report-Template/issues"><img src="https://img.shields.io/github/issues/MGriot/LaTeX-Scientific-Report-Template" alt="Issues"></a>
+  <a href="https://github.com/MGriot/LaTeX-Scientific-Report-Template/blob/master/LICENSE"><img src="https://img.shields.io/github/license/MGriot/LaTeX-Scientific-Report-Template" alt="License"></a>
+</p>
 
-- [LaTeX Scientific Report Template](#latex-scientific-report-template)
-- [Setup](#setup)
-- [Template](#template)
-  - [Introduction](#introduction)
-  - [main.tex](#maintex)
-  - [settings.tex](#settingstex)
-  - [package.tex](#packagetex)
-  - [bibliography.bib](#bibliographybib)
-  - [img/](#img)
-  - [section/](#section)
+A LaTeX template for **laboratory reports**, designed for chemistry but easy to adapt to any experimental subject. It gives you a clean title block, a header and footer with report data, a section skeleton that explains what to write in each part, and ready-made tools for chemical formulae, safety data, units, plots and flowcharts.
 
-This is a template for writing laboratory reports in LaTeX. It has a predominantly chemical footprint but can be adapted to any need.
-An example of this template is available [here](https://github.com/MGriot/LaTeX-Scientific-Report-Template/blob/master/.out/main.pdf).
+📄 **[See the compiled example PDF](.out/main.pdf)**
 
-This guide, however, is not intended to be a tutorial on how to write in LaTeX, so it assumes that you know how to write a LaTeX file.
+<p align="center">
+  <img src="img/GitHub/title.png" alt="Title block" width="45%">
+  <img src="img/GitHub/header_and_footer.png" alt="Header and footer" width="45%">
+</p>
 
-# Setup
-1. First, you need a LaTeX compiler. You can work offline or online:
-   * **online**:
-      - you can use [TeXShop][texshop] or a similar native client to typeset the
-   LaTeX file or an online editor such [Overleaf](https://it.overleaf.com/);
-    * **offline**:
-      * instructions for obtaining it can be found here: <http://latex-project.org/ftp.html>;
-1. Download this package through the release section or alternatively `Code -> Download zip` and unzip:
-1. Compile the document through the `main.tex` file, the heart of the template contained within the downloaded folder.
+> This guide explains how to use the template; it assumes basic LaTeX knowledge. New to LaTeX? Start with [Learn LaTeX in 30 minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes).
 
-# Template
+## Contents
 
-## Introduction
+- [Features](#features)
+- [Quick start](#quick-start)
+- [Project structure](#project-structure)
+- [Configuration](#configuration)
+- [Writing the report](#writing-the-report)
+- [Chemistry and safety tools](#chemistry-and-safety-tools)
+- [Units, tables, plots and cross-references](#units-tables-plots-and-cross-references)
+- [Flowcharts](#flowcharts)
+- [Notes and comments](#notes-and-comments)
+- [Bibliography](#bibliography)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
 
-The template is structured in such a way that you can comfortably write a report by dividing each section into a different file located in the `section` folder.
-However, there are some files of greater importance that are listed below and addressed in a separate section one by one.
+## Features
 
-- `main.tex`
-- `config/settings.tex`
-- `config/package.tex`
-- `bibliography.bib`
-- `img/`
-- `section/`
+- **One place for report data**: author, course, title, report number, class and dates are set once and reused in the title, header, footer and PDF metadata.
+- **Guided sections**: Objective, Principle of the method, Instruments, Reagents, Procedure, Reactions, Data and calculations, Conclusions, Bibliography, each with writing tips.
+- **Chemistry**: `mhchem` for formulae and equations, `chemfig` for structures, `modiagram` for molecular orbital diagrams.
+- **Safety**: every GHS hazard (H), precautionary (P) and EU supplemental (EUH) statement available through `\Hphrase{H314}` / `\Pphrase{P280}`, plus the nine GHS pictograms.
+- **Units and numbers** with `siunitx`, decimal-aligned table columns, `booktabs` tables.
+- **Plots** with `pgfplots`, from inline coordinates or data files.
+- **Flowcharts** with a library of predefined TikZ node and arrow styles.
+- **Smart references** with `cleveref` (`\cref{fig:x}` → "Figure 3").
+- **Margin notes** (`todonotes`) to mark open points while drafting, removable with one option.
+- **ACS citation style** via `biblatex-chem`.
+- Clean builds with `latexmk`: auxiliary files go to `.out/`.
 
-## main.tex
+## Quick start
 
-In this file, the beating heart of the template, you will find in the first few lines:
+### 1. Install a LaTeX distribution
 
-```LaTeX
-\documentclass[a4paper]{article} %file structure
-\usepackage[utf8]{inputenc}
+| Option | How |
+| --- | --- |
+| **Online** | Upload the project to [Overleaf](https://www.overleaf.com/) (*New Project → Upload Project* with the zip). Use compiler pdfLaTeX and main document `main.tex`. If no PDF appears, delete `.latexmkrc` (its output folder setting is meant for local builds). |
+| **Windows** | [MiKTeX](https://miktex.org/download) (allow on-the-fly package installation) or [TeX Live](https://tug.org/texlive/). Keep the distribution updated. |
+| **macOS** | [MacTeX](https://tug.org/mactex/). |
+| **Linux** | TeX Live from your package manager (e.g. `texlive-full`) or from [tug.org](https://tug.org/texlive/). |
 
-\input{config/package} %packages used
-\input{config/settings} %file with settings
+A good editor helps: [VS Code](https://code.visualstudio.com/) with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), [TeXstudio](https://www.texstudio.org/) or [TeXShop](https://pages.uoregon.edu/koch/texshop/) (macOS).
+
+### 2. Get the template
+
+Download the latest [release](https://github.com/MGriot/LaTeX-Scientific-Report-Template/releases), or *Code → Download ZIP*, or clone it:
+
+```bash
+git clone https://github.com/MGriot/LaTeX-Scientific-Report-Template.git
 ```
 
-`\input{config/package}` indicates where all the packages used to build the output file are located. It should only be modified if you know what you are doing because removing packages may compromise the correct composition of `main.tex`.
+### 3. Compile
 
-`\input{config/settings}` is the part that styles the final file. This is where the settings, commands and settings of the packages used are contained. It will be analysed in detail in a separate section.
+The bibliography is processed by **biber**, so the document needs several passes. `latexmk` does it all, reading the settings in `.latexmkrc`:
 
-Continuing to scroll through the file, you come across:
-
-```LaTex
-%Name and Surname 
-\def \nome {Name}
-\def \cognome {Surname}
-
-%title and data
-\title{Laboratory of xxxx \\ \huge{Report Template}}
-\author{\nome \ \cognome}
-\date{\today}
-
+```bash
+latexmk main.tex
 ```
 
-In `\def \nome {Nome}` e `\def \cognome {Surname}`, replace Name and Surname in curly braces "{}" with the first and last name of the document's author. This will place the author's first and last name wherever it is needed within the document.
+The PDF is written to `.out/main.pdf`. To remove auxiliary files run `latexmk -c`.
 
-`\title{Laboratory of xxxx \\ \huge{Report Template}}}` is the command that allows the title to be created. Replace "xxxx" with the name of the subject. If necessary, you can change the whole "Laboratory of xxxx" part. The second piece, however, is the actual title, so you need to replace "Report Template" with your own title.
+Without latexmk, run `pdflatex main.tex`, `biber main`, then `pdflatex main.tex` twice (in that case the output stays in the project folder).
 
-`\date{\today}` inserts the compilation date of the file, but it is generally advisable to put the date of the experience you want to report.
+## Project structure
 
-This first part in particular goes to form everything that is enclosed in the red rectangle in the image below:
-
-![Titolo](img/GitHub/titolo.png)
-
-Immediately afterwards comes an important part that defines the header and footer.
-
-```LaTex
-%page style
-\pagestyle{fancy}
-\fancypagestyle{plain}{}
-\fancyhf{}
-\rhead{\nome \ \cognome \\ Delivery date: xxxx}
-\lhead{Report No. x \\ Class: XE}
-\rfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}}
-\lfoot{\includegraphics[scale=0.1]{img/GitHub/qrcode_github.com.png} LaTeX Template by M.Griot}
-\setlength{\headheight}{22.54448pt}
+```text
+.
+├── main.tex                     # entry point: loads config, presets and sections
+├── .latexmkrc                   # build settings (pdfLaTeX + biber, output in .out/)
+├── bibliography.bib             # bibliography database
+├── config/
+│   ├── package.tex              # packages, in the correct load order
+│   ├── settings.tex             # report data, layout, header/footer, custom commands
+│   ├── flowchart.tex            # TikZ styles for flowcharts
+│   ├── ghs_phrases.tex          # GHS H, P and EUH statements
+│   └── preset/                  # alternative title blocks (1a, 2a + 2b)
+├── section/
+│   ├── 0_abstract.tex
+│   ├── 1_objective.tex
+│   ├── 2_principle_of_the_method.tex
+│   ├── 3_instruments.tex
+│   ├── 4_reagents.tex
+│   ├── 5_procedure.tex
+│   ├── 6_reactions.tex
+│   ├── 7_data_and_calculations.tex
+│   ├── 8_conclusions.tex
+│   ├── 9_bibliography.tex
+│   ├── 10_hazard_statements.tex
+│   ├── examples.tex             # reference examples: delete in a real report
+│   └── useful_links.tex         # reference links: delete in a real report
+├── data/                        # data files for plots
+└── img/
+    ├── pictograms/              # GHS hazard pictograms
+    └── GitHub/                  # images used by this README
 ```
 
-- `\rhead{\nome \ \cognome \\ Data consegna: xxxx}` takes care of putting the author's name and surname, this part automatically, and the delivery date in the header of each page of the document. For the date you need to put the delivery date of the report instead of "xxxx". This is to keep better track of laboratory activities.
-- The line `\lhead{Report No. x \\ Class: XE}` allows you to write the report number. If you were to write more reports over time, you would need to replace "x" with the correct number. There is also the possibility to insert the class or course by changing "Class: XE" to yours.
-- `\rfoot{Page. \thepage \hspace{1pt} of \pageref{LastPage}}`, on the other hand, writes the page number in the right footer by putting the current page number and the total number of pages, useful if you are afraid that some sheets may be lost. It is advisable not to modify it too much.
-- `\lfoot{\includegraphics[scale=0.1]{img/GitHub/qrcode_github.com.png} Template \LaTeX \;di M.Griot}` is the penultimate line and creates a QRcode at the bottom left with the link to this page and indicates the author of the template. If you do not want this addition, simply delete the entire line. Of course, if you use this template, I would be happy if you would include the address of this page or the name of its author, but the decision is up to you!
-- The last line, `\setlength{\headheight}{22.54448pt}`, adjusts the height of the header and footer and is not recommended to be modified.
+## Configuration
 
-This second part goes to form everything that is enclosed in the red rectangles in the image below:
+### Report data
 
-![Testatina](img/GitHub/testatina_e_piedipagina.png)
+Everything that changes from one report to the next is at the top of [`config/settings.tex`](config/settings.tex):
 
-Finally, there is the body text section.
-
-```LaTex
-\hypersetup{pdftitle={Template Example}, pdfauthor={\cognome \; \nome}}
-
-\begin{document}
-
-\maketitle 
-\input{section/0_Sommario} 
-\input{section/1_Obbiettivo}
-\input{section/2_Principio_del_metodo}
-\input{section/3_Strumenti}
-\input{section/4_Reagenti}
-\input{section/5_Procedimento}
-\input{section/6_Reazioni}
-\input{section/7_Dati_e_Calcoli}
-\input{section/8_Conclusioni}
-\input{section/9_Bibliografia}
-\input{section/10_H_e_P_frasi} 
-
-\input{section/link_utili}
-\input{section/esempi}
-\end{document}
-
+```latex
+\newcommand{\authorname}{Name}
+\newcommand{\authorsurname}{Surname}
+\newcommand{\course}{Laboratory of xxxx}     % subject / course name
+\newcommand{\reporttitle}{Report Template}   % title of the experiment
+\newcommand{\reportnumber}{x}                % progressive number of the report
+\newcommand{\classname}{XE}                  % class, group or course code
+\newcommand{\performeddate}{\today}          % date the experiment was performed
+\newcommand{\deliverydate}{\today}           % date the report is handed in
 ```
 
-- The first line `\hypersetup{pdftitle={Template Example}, pdfauthor={\cognome \; \nome}}` serves to display the file name and author as properties of the generated PDF.
-- `\maketitle` allows you to build the Title section we discussed earlier. Do not delete it or the document title will disappear.
-- All lines between `\maketitle` and `\end{document}` are all sections that are imported to compose the document. Those that see a number before the name, e.g. `\input{section/1_Obbiettivo}`, are to be kept, as needed, while the last two lines can be deleted as they load text that is useful to the Template but useless for the purpose of a report.
+Write dates explicitly (e.g. `\newcommand{\performeddate}{12 March 2025}`) rather than `\today`, which is the compilation date. To add co-authors, extend `\author`: `\author{\authorname\ \authorsurname \and Jane Doe}`.
 
-## settings.tex
+These values fill the title, the header (report number, delivery date, author, class), the footer (*Page x of y*) and the PDF properties.
 
-This file, which can be reached via the path: `config/settings`, is the file dedicated to holding the information and preferences for building the document. The lines of code that compose it are few and simple.
+### Title block presets
 
-```LaTex
-%%%%%Colors
-\definecolor{red}{RGB}{255,0,0}
-\definecolor{orange}{RGB}{255,165,0}
-\definecolor{blue}{RGB}{0,0,255}
-\definecolor{green}{RGB}{143,206,0}
+`main.tex` loads one preset from `config/preset/`:
 
-%%%%%%%%%% ToDo notes
-% \usepackage[colorinlistoftodos,prependcaption,textsize=tiny,disable]{todonotes}
-\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
-\newcommandx{\change}[2][1=]{\todo[linecolor=orange,backgroundcolor=orange!25,bordercolor=orange,#1]{#2}}
-\newcommandx{\info}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
-\newcommandx{\improvement}[2][1=]{\todo[linecolor=green,backgroundcolor=green!25,bordercolor=green,#1]{#2}}
-\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+| Preset | Result |
+| --- | --- |
+| `preset_1a` (default) | Date the experiment was performed shown under the author. |
+| `preset_2a` + `preset_2b` | No date in the title; a small table below it with date performed, partners and instructor. Load `preset_2a` in the preamble and uncomment `\input{config/preset/preset_2b}` right after `\maketitle`. |
 
-%per flowchart
-\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
-\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
-\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
-\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
-\tikzstyle{arrow} = [thick,->,>=stealth]
-\pgfplotsset{compat=1.18}
+### Layout
 
-%for H and P phrases
-\input{config/H_P_command}
+In [`config/settings.tex`](config/settings.tex):
 
-%adds the bibliography file for citations
-\addbibresource{bibliography.bib} %Import the bibliography file
+- **Margins**: `\geometry{a4paper, top=3cm, bottom=3cm, left=1.5cm, right=1.5cm}`.
+- **Header and footer**: the `\fancyhead[L]`, `\fancyhead[R]` and `\fancyfoot[R]` lines. An optional footer line with a QR code crediting the template is provided, commented out; enabling it is appreciated but not required.
+- **Paragraph indentation**: uncomment `\setlength{\parindent}{0pt}` to remove it.
 
+In [`config/package.tex`](config/package.tex):
+
+- **Font size**: `\usepackage[fontsize=13pt]{scrextend}` accepts any size, unlike the standard 10/11/12pt class options.
+- **Language**: `\usepackage[english]{babel}` sets the language of generated text (*Contents*, *Figure*, dates) and hyphenation. Change it to e.g. `italian` or `german` if you write in another language.
+- **Indentation of the first paragraph** after a heading: remove `indentfirst` if you prefer the English typographic convention of no indent.
+
+## Writing the report
+
+Each file in `section/` contains a short explanation of what belongs in that section, with examples: replace the explanations with your content. Remove the `\input` line in `main.tex` for any section you don't need, and delete the `useful_links` and `examples` lines before handing in the report.
+
+| Section | Content |
+| --- | --- |
+| Abstract | Short summary of the experiment, method and main result. |
+| Objective | The aim of the experiment in one or two sentences. |
+| Principle of the method | The theory needed to understand the experiment. |
+| Instruments | Glassware and instruments, with capacity, tolerance and resolution. |
+| Reagents | Chemicals with concentration or purity, and their safety data. |
+| Procedure | The procedure actually followed, with relevant observations. |
+| Reactions | Balanced reactions and mechanisms. |
+| Data and calculations | Raw data, formulae with units, calculations, plots. |
+| Conclusions | Outcome, comparison with literature values, critical remarks. |
+| Bibliography | The sources used. |
+| Hazard statements | Full text of the H and P statements cited in the reagent table. |
+
+## Chemistry and safety tools
+
+### Formulae, equations and structures
+
+```latex
+\ce{H2SO4}                      % formula
+\ce{2 H2O2 -> 2 H2O + O2 ^}     % reaction (^ = gas, v = precipitate)
+\ce{H2O <=> H+ + OH-}           % equilibrium
+\ce{CuSO4.5H2O}                 % hydrate
+\chemfig{*6(-=-=-=)}            % benzene ring
 ```
 
-- The lines below `%%%%%Colors` allow you to define colours. You can add other colours manually to further customise your document.
-- The lines below `ToDo notes` allow you to define markers within the text, useful for highlighting missing parts, writing notes or alerts as shown in the figures below.  
-- The lines below `%per flowchart` are for defining the settings for building flowcharts, in particular the cells and arrows. You can modify them or add other geometric shapes. 
-- The line `\input{config/H_P_command}` allows you to import a file that allows you to write the P and H phrases quickly and automatically within the report by writing only the number of such phrases.
-- Finally, the line `\addbibresource{bibliography.bib}` is responsible for importing the file containing the bibliography details in `.bib` format`
+See the `mhchem`, `chemfig` and `modiagram` examples in `section/6_reactions.tex` and `section/examples.tex`.
 
-## package.tex
+### GHS hazard and precautionary statements
 
-This is the file that contains all the packages used for this document. If necessary, other packages can be added.
+[`config/ghs_phrases.tex`](config/ghs_phrases.tex) contains the official English wording (UN GHS Rev. 10 and EU CLP) of all H statements, P statements (including the common combinations) and EUH statements:
 
-```LaTex
-\usepackage[italian]{babel}%translation of automatically generated parts
-\usepackage{geometry}
-\geometry{a4paper,top=3cm,bottom=3cm,left=1.5cm,right=1.5cm} %page  dimension
-\usepackage[fontsize=13pt]{scrextend} % for change the fontsize, different from article class
-\usepackage{fancyhdr}
-\usepackage{indentfirst} %indentation in the first sentence of the paragraph
-\usepackage{lastpage}
-\usepackage{xcolor}
-\usepackage{mdframed}
-\usepackage[version=4]{mhchem}%for chemical formulas and equations
-\usepackage{chemfig} %for 2D chemistry formulas
-\usepackage{modiagram} % molecular orbital diagrams
-\usepackage{wrapfig}
-\usepackage{pgfplots}
-\usepackage{floatrow}
-\usepackage{tikz}
-\usepackage{subcaption}
-\usepackage{longtable} %Multi-page tables
-\usepackage{graphicx}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{tabularx}
-\usepackage{array}
-\usetikzlibrary{shapes.geometric, arrows, calc, patterns, positioning}%per flowchart
-\usepackage{amsmath}
-\usepackage{booktabs}
-\usepackage{multicol}
-\usepackage[font=scriptsize]{caption}%per image captions
-\usepackage{xstring} % to create p and h phrase command
-\usepackage{csquotes}
-\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}%only for notes, useful for taking notes, if you add "disable" they are all removed from the pdf but can remain in the text.
-\usepackage{xargs} % Use more than one optional parameter in a new commands
-\usepackage[autocite=superscript,style=chem-acs,articletitle,doi,url]{biblatex}%bibliography, use the \autocite command to use the American Chemical Society style
-\usepackage{hyperref}%hyperlinks
-
+```latex
+\Hphrase{H314}            % H314 – Causes severe skin burns and eye damage.
+\Pphrase{P305+P351+P338}  % spaces around "+" are optional
+\Hphrase{EUH019}
 ```
 
-We will not analyse all the installed packages but will only focus on a few.
+An unknown code stops compilation with a clear error. Add a missing statement or override one in the preamble:
 
-- `\geometry{a4paper,top=3cm,bottom=3cm,left=1.5cm,right=1.5cm}` allows you to choose the page layout more freely, in this case giving a top and bottom margin of 3 cm and a right and left side margin of 1.5 cm. Of course, by varying these numbers you can change the margins to best suit your needs.
-- `\usepackage[fontsize=13pt]{scrextend}` allows you to have more freedom in changing the font size without having to comply with LaTeX's strict rules. In this case, size 13 was chosen, but it can be changed as needed.
-- `\usepackage{indentfirst}` allows you to indent even the first lines after section headings, its use depends on personal taste.
-- `\usepackage[autocite=superscript,style=chem-acs,articletitle,doi,url]{biblatex}` sets a citation style with biblatex in line with the America Chemical Society, to use this style you need to use the `\autocite` command in the text.
+```latex
+\DeclareGHSPhrase{P221}{Take any precaution to avoid mixing with combustibles.}
+```
 
-## bibliography.bib
+To change how every statement looks, redefine `\ghsformat`, e.g. `\renewcommand{\ghsformat}[2]{#1: \emph{#2}}`.
 
-This file stores all the data required for citations. See the biblatex documentation for more information.
+### Pictograms
 
-## img/
+`img/pictograms/` contains the nine GHS pictograms:
 
-For the images, a folder is used where they are collected in order to make the working folder more tidy and clean. It is recommended that you place the images in this folder, with a proper subdivision, in order to make the work more orderly.
+| File | Code | File | Code |
+| --- | --- | --- | --- |
+| `explosive.png` | GHS01 | `acute-toxicity.png` | GHS06 |
+| `flammable.png` | GHS02 | `health-hazard.png` | GHS07 |
+| `oxidizing.png` | GHS03 | `serious-health-hazard.png` | GHS08 |
+| `gas-under-pressure.png` | GHS04 | `hazardous-to-environment.png` | GHS09 |
+| `corrosive.png` | GHS05 | | |
 
-## section/
+`section/4_reagents.tex` shows complete reagent tables with structure, statements, pictograms, PPE and exposure limits.
 
-It is the beating heart of the report, this folder contains the files that make up the report. It contains several files:
+## Units, tables, plots and cross-references
 
-- 0_Sommario (Summary)
-- 1_Obbiettivo (Objective)
-- 2_Principio del metodo (Principle of the method)
-- 3_Strumenti (Instruments)
-- 4_Reagenti (Reagents)
-- 5_Procedimento (Procedure)
-- 6_Reazioni (Reactions)
-- 7_Dati e Calcoli (Data and Calculations)
-- 8_Conclusioni (Conclusions)
-- 9_bibliografia (Bibliography)
-- 10_H e P frasi (H and P phrases)
-- esempi (Examples)
-- link utili (Useful Links)
+```latex
+\qty{25.00}{\milli\litre}            % quantity with unit
+\unit{\mole\per\litre}               % unit only
+\num{6.022e23}                       % number
+\qty{0.1032(4)}{\mole\per\litre}     % value with uncertainty
+```
 
-The explanation of the files 1_Obbiettivo to 9_bibliografia are reported in the files themselves and in the sample pdf that you can retrieve above.
+- **Tables** use `booktabs` rules (`\toprule`, `\midrule`, `\bottomrule`) without vertical lines. The column type `S[table-format=2.2]` from `siunitx` aligns numbers on the decimal point; the custom column `C{3cm}` (defined in `settings.tex`) is a centred, vertically middle-aligned cell, handy for images.
+- **Plots** use `pgfplots`; `section/7_data_and_calculations.tex` shows a plot from coordinates and one read from `data/*.txt` with `\addplot table {data/data.txt};`.
+- **References**: give every float a `\label` with a prefix (`fig:`, `tab:`, `eq:`) and refer to it with `\cref{fig:solubility}`, which prints "Figure 2" automatically. Use `\Cref` at the beginning of a sentence.
 
-The files `esempi` and `link utili` are for user assistance and should never be incorporated into the final report.
+## Flowcharts
 
-This is an example of how to improve the README.md file by translating it into English and adding more explanations. Remember to keep your README file clear, concise, and easy to understand for users who are new to your project.
+Styles defined in [`config/flowchart.tex`](config/flowchart.tex):
+
+| Style | Shape |
+| --- | --- |
+| `starter`, `terminator`, `terminator_longtext2` | Start / end (rounded) |
+| `process`, `process_longtext2`, `process_longtext2.5` | Process (rectangle, optionally fixed width) |
+| `decision` | Decision (diamond) |
+| `io` | Input / output (parallelogram) |
+| `manual_input` | Manual input |
+| `document`, `multiple_document` | Document(s) |
+| `database` | Stored data (cylinder) |
+| `invisible_node` | Invisible point to route lines |
+| `arrow_stealth`, `arrow_stealth_rounded`, `double_arrow_stealth` | Arrows with Stealth tips |
+| `arrow_latex`, `arrow_latex_rounded`, `double_arrow_latex` | Arrows with LaTeX tips |
+| `line_rect`, `line_round`, `line_butt`, `line_rounded_corners`, `line_rounded_corners_dotted` | Plain lines |
+
+```latex
+\begin{tikzpicture}[node distance=1cm and 1.5cm]
+    \node (start) [starter] {Start};
+    \node (step)  [process, below=of start] {Weigh the sample};
+    \node (check) [decision, below=of step] {Dry?};
+    \node (stop)  [terminator, below=of check] {Stop};
+    \draw [arrow_stealth] (start) -- (step);
+    \draw [arrow_stealth] (step) -- (check);
+    \draw [arrow_stealth] (check) -- node[right] {yes} (stop);
+    \draw [arrow_stealth_rounded] (check.east) -- ++(1,0) |- node[near start, right] {no} (step);
+\end{tikzpicture}
+```
+
+<p align="center"><img src="img/GitHub/flowchart.png" alt="Flowchart example" width="50%"></p>
+
+## Notes and comments
+
+While drafting, mark open points with coloured notes (defined in `config/settings.tex`):
+
+```latex
+\unsure{Is this value correct?}        % red
+\change{Rephrase this}                 % orange
+\info{Source: lab handout, p. 3}       % blue
+\improvement{Add an error analysis}    % green
+\info[inline]{A note inside the text}  % inline instead of in the margin
+\listoftodos                           % list of all notes
+```
+
+<p align="center"><img src="img/GitHub/todo_note.png" alt="Todo notes" width="60%"></p>
+
+To hide all notes in the final PDF without deleting them, add `disable` to the `todonotes` options in `config/package.tex`.
+
+## Bibliography
+
+Add entries to [`bibliography.bib`](bibliography.bib) and cite them with `\autocite{key}`, which produces superscript numbers in the American Chemical Society style (`biblatex` with `style=chem-acs`). Only cited entries appear in the list. Tools such as [doi2bib](https://www.doi2bib.org/) or [Zotero](https://www.zotero.org/) generate BibTeX entries from a DOI.
+
+To use another style, change the `biblatex` options in `config/package.tex`, e.g. `style=numeric-comp` or `style=authoryear`.
+
+## Troubleshooting
+
+| Problem | Solution |
+| --- | --- |
+| Bibliography empty, citations shown as **[key]** | biber did not run: compile with `latexmk`, or run `biber main` between two `pdflatex` runs. On Overleaf, use *Recompile from scratch*. |
+| `File 'xxx.sty' not found` | Install the missing package (MiKTeX Console / `tlmgr install xxx`), or install the full distribution. |
+| Errors inside `siunitx`, `expl3` or other LaTeX3 packages (e.g. `Undefined control sequence ... siunitx_print`) | Packages and LaTeX kernel are out of sync: update the whole distribution (MiKTeX Console → *Updates*, or `tlmgr update --all`). |
+| `Unknown GHS statement code` | Check the code, or add it with `\DeclareGHSPhrase`. |
+| `Package fancyhdr Warning: \headheight is too small` | Increase `\headheight` in `settings.tex` (needed with bigger fonts or more header lines). |
+| Images not found | Paths are relative to `main.tex`; avoid spaces in file names. |
+
+## License
+
+Released under the [GPL-3.0 License](LICENSE). If you use this template, a mention of the [repository](https://github.com/MGriot/LaTeX-Scientific-Report-Template) or of its author is appreciated but not required.

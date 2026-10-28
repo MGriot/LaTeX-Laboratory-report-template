@@ -1,0 +1,335 @@
+%----------------------------------------------------------------------------------------
+%	GHS HAZARD (H) AND PRECAUTIONARY (P) STATEMENTS
+%
+%   Usage in the text:
+%       \Hphrase{H314}               -> H314 -- Causes severe skin burns and eye damage.
+%       \Pphrase{P305+P351+P338}     -> combined statements; spaces around "+" are ignored
+%       \Hphrase{EUH019}             -> EU-specific supplemental statements
+%
+%   Add or override a statement in the preamble:
+%       \DeclareGHSPhrase{H999}{Your text.}
+%
+%   Change the look of every statement by redefining \ghsformat{code}{text}.
+%
+%   Wording: UN GHS Rev. 10 (2023) and EU CLP Regulation (EC) No 1272/2008.
+%   Text in "..." or "/" lists must be completed or chosen as in the safety data sheet.
+%   Sources:
+%       https://unece.org/transport/standards/transport/dangerous-goods/ghs-rev10-2023
+%       https://pubchem.ncbi.nlm.nih.gov/ghs/
+%       https://echa.europa.eu/regulations/clp/labelling
+%----------------------------------------------------------------------------------------
+
+\makeatletter
+% Store a statement under its code with all spaces removed.
+\newcommand{\DeclareGHSPhrase}[2]{\@namedef{ghs@\zap@space#1 \@empty}{#2}}
+% Print a statement; an unknown code raises an error and is printed in red.
+\newcommand{\GHSphrase}[1]{%
+    \edef\ghs@key{\zap@space#1 \@empty}%
+    \@ifundefined{ghs@\ghs@key}{%
+        \PackageError{ghs_phrases}{Unknown GHS statement code `#1'}%
+            {Check the code or add it with \protect\DeclareGHSPhrase{#1}{text}.}%
+        \ghsformat{\textcolor{red}{#1}}{??}%
+    }{%
+        \ghsformat{#1}{\@nameuse{ghs@\ghs@key}}%
+    }%
+}
+\makeatother
+\newcommand{\ghsformat}[2]{\textbf{#1}~--~#2}
+\newcommand{\Hphrase}[1]{\GHSphrase{#1}}
+\newcommand{\Pphrase}[1]{\GHSphrase{#1}}
+
+%=========================================================================================
+%   HAZARD STATEMENTS
+%=========================================================================================
+
+%--- Physical hazards --------------------------------------------------------------------
+\DeclareGHSPhrase{H200}{Unstable explosive.}
+\DeclareGHSPhrase{H201}{Explosive; mass explosion hazard.}
+\DeclareGHSPhrase{H202}{Explosive; severe projection hazard.}
+\DeclareGHSPhrase{H203}{Explosive; fire, blast or projection hazard.}
+\DeclareGHSPhrase{H204}{Fire or projection hazard.}
+\DeclareGHSPhrase{H205}{May mass explode in fire.}
+\DeclareGHSPhrase{H206}{Fire, blast or projection hazard; increased risk of explosion if desensitizing agent is reduced.}
+\DeclareGHSPhrase{H207}{Fire or projection hazard; increased risk of explosion if desensitizing agent is reduced.}
+\DeclareGHSPhrase{H208}{Fire hazard; increased risk of explosion if desensitizing agent is reduced.}
+\DeclareGHSPhrase{H209}{Explosive.}
+\DeclareGHSPhrase{H210}{Very sensitive.}
+\DeclareGHSPhrase{H211}{May be sensitive.}
+\DeclareGHSPhrase{H220}{Extremely flammable gas.}
+\DeclareGHSPhrase{H221}{Flammable gas.}
+\DeclareGHSPhrase{H222}{Extremely flammable aerosol.}
+\DeclareGHSPhrase{H223}{Flammable aerosol.}
+\DeclareGHSPhrase{H224}{Extremely flammable liquid and vapour.}
+\DeclareGHSPhrase{H225}{Highly flammable liquid and vapour.}
+\DeclareGHSPhrase{H226}{Flammable liquid and vapour.}
+\DeclareGHSPhrase{H227}{Combustible liquid.}
+\DeclareGHSPhrase{H228}{Flammable solid.}
+\DeclareGHSPhrase{H229}{Pressurized container: may burst if heated.}
+\DeclareGHSPhrase{H230}{May react explosively even in the absence of air.}
+\DeclareGHSPhrase{H231}{May react explosively even in the absence of air at elevated pressure and/or temperature.}
+\DeclareGHSPhrase{H232}{May ignite spontaneously if exposed to air.}
+\DeclareGHSPhrase{H240}{Heating may cause an explosion.}
+\DeclareGHSPhrase{H241}{Heating may cause a fire or explosion.}
+\DeclareGHSPhrase{H242}{Heating may cause a fire.}
+\DeclareGHSPhrase{H250}{Catches fire spontaneously if exposed to air.}
+\DeclareGHSPhrase{H251}{Self-heating; may catch fire.}
+\DeclareGHSPhrase{H252}{Self-heating in large quantities; may catch fire.}
+\DeclareGHSPhrase{H260}{In contact with water releases flammable gases which may ignite spontaneously.}
+\DeclareGHSPhrase{H261}{In contact with water releases flammable gas.}
+\DeclareGHSPhrase{H270}{May cause or intensify fire; oxidizer.}
+\DeclareGHSPhrase{H271}{May cause fire or explosion; strong oxidizer.}
+\DeclareGHSPhrase{H272}{May intensify fire; oxidizer.}
+\DeclareGHSPhrase{H280}{Contains gas under pressure; may explode if heated.}
+\DeclareGHSPhrase{H281}{Contains refrigerated gas; may cause cryogenic burns or injury.}
+\DeclareGHSPhrase{H282}{Extremely flammable chemical under pressure: may explode if heated.}
+\DeclareGHSPhrase{H283}{Flammable chemical under pressure: may explode if heated.}
+\DeclareGHSPhrase{H284}{Chemical under pressure: may explode if heated.}
+\DeclareGHSPhrase{H290}{May be corrosive to metals.}
+
+%--- Health hazards ----------------------------------------------------------------------
+\DeclareGHSPhrase{H300}{Fatal if swallowed.}
+\DeclareGHSPhrase{H301}{Toxic if swallowed.}
+\DeclareGHSPhrase{H302}{Harmful if swallowed.}
+\DeclareGHSPhrase{H303}{May be harmful if swallowed.}
+\DeclareGHSPhrase{H304}{May be fatal if swallowed and enters airways.}
+\DeclareGHSPhrase{H305}{May be harmful if swallowed and enters airways.}
+\DeclareGHSPhrase{H310}{Fatal in contact with skin.}
+\DeclareGHSPhrase{H311}{Toxic in contact with skin.}
+\DeclareGHSPhrase{H312}{Harmful in contact with skin.}
+\DeclareGHSPhrase{H313}{May be harmful in contact with skin.}
+\DeclareGHSPhrase{H314}{Causes severe skin burns and eye damage.}
+\DeclareGHSPhrase{H315}{Causes skin irritation.}
+\DeclareGHSPhrase{H316}{Causes mild skin irritation.}
+\DeclareGHSPhrase{H317}{May cause an allergic skin reaction.}
+\DeclareGHSPhrase{H318}{Causes serious eye damage.}
+\DeclareGHSPhrase{H319}{Causes serious eye irritation.}
+\DeclareGHSPhrase{H320}{Causes eye irritation.}
+\DeclareGHSPhrase{H330}{Fatal if inhaled.}
+\DeclareGHSPhrase{H331}{Toxic if inhaled.}
+\DeclareGHSPhrase{H332}{Harmful if inhaled.}
+\DeclareGHSPhrase{H333}{May be harmful if inhaled.}
+\DeclareGHSPhrase{H334}{May cause allergy or asthma symptoms or breathing difficulties if inhaled.}
+\DeclareGHSPhrase{H335}{May cause respiratory irritation.}
+\DeclareGHSPhrase{H336}{May cause drowsiness or dizziness.}
+\DeclareGHSPhrase{H340}{May cause genetic defects.}
+\DeclareGHSPhrase{H341}{Suspected of causing genetic defects.}
+\DeclareGHSPhrase{H350}{May cause cancer.}
+\DeclareGHSPhrase{H350i}{May cause cancer by inhalation.}
+\DeclareGHSPhrase{H351}{Suspected of causing cancer.}
+\DeclareGHSPhrase{H360}{May damage fertility or the unborn child.}
+\DeclareGHSPhrase{H360F}{May damage fertility.}
+\DeclareGHSPhrase{H360D}{May damage the unborn child.}
+\DeclareGHSPhrase{H360FD}{May damage fertility. May damage the unborn child.}
+\DeclareGHSPhrase{H360Fd}{May damage fertility. Suspected of damaging the unborn child.}
+\DeclareGHSPhrase{H360Df}{May damage the unborn child. Suspected of damaging fertility.}
+\DeclareGHSPhrase{H361}{Suspected of damaging fertility or the unborn child.}
+\DeclareGHSPhrase{H361f}{Suspected of damaging fertility.}
+\DeclareGHSPhrase{H361d}{Suspected of damaging the unborn child.}
+\DeclareGHSPhrase{H361fd}{Suspected of damaging fertility. Suspected of damaging the unborn child.}
+\DeclareGHSPhrase{H362}{May cause harm to breast-fed children.}
+\DeclareGHSPhrase{H370}{Causes damage to organs.}
+\DeclareGHSPhrase{H371}{May cause damage to organs.}
+\DeclareGHSPhrase{H372}{Causes damage to organs through prolonged or repeated exposure.}
+\DeclareGHSPhrase{H373}{May cause damage to organs through prolonged or repeated exposure.}
+% Combined health hazard statements
+\DeclareGHSPhrase{H300+H310}{Fatal if swallowed or in contact with skin.}
+\DeclareGHSPhrase{H300+H330}{Fatal if swallowed or if inhaled.}
+\DeclareGHSPhrase{H310+H330}{Fatal in contact with skin or if inhaled.}
+\DeclareGHSPhrase{H300+H310+H330}{Fatal if swallowed, in contact with skin or if inhaled.}
+\DeclareGHSPhrase{H301+H311}{Toxic if swallowed or in contact with skin.}
+\DeclareGHSPhrase{H301+H331}{Toxic if swallowed or if inhaled.}
+\DeclareGHSPhrase{H311+H331}{Toxic in contact with skin or if inhaled.}
+\DeclareGHSPhrase{H301+H311+H331}{Toxic if swallowed, in contact with skin or if inhaled.}
+\DeclareGHSPhrase{H302+H312}{Harmful if swallowed or in contact with skin.}
+\DeclareGHSPhrase{H302+H332}{Harmful if swallowed or if inhaled.}
+\DeclareGHSPhrase{H312+H332}{Harmful in contact with skin or if inhaled.}
+\DeclareGHSPhrase{H302+H312+H332}{Harmful if swallowed, in contact with skin or if inhaled.}
+\DeclareGHSPhrase{H315+H320}{Causes skin and eye irritation.}
+
+%--- Environmental hazards ---------------------------------------------------------------
+\DeclareGHSPhrase{H400}{Very toxic to aquatic life.}
+\DeclareGHSPhrase{H401}{Toxic to aquatic life.}
+\DeclareGHSPhrase{H402}{Harmful to aquatic life.}
+\DeclareGHSPhrase{H410}{Very toxic to aquatic life with long lasting effects.}
+\DeclareGHSPhrase{H411}{Toxic to aquatic life with long lasting effects.}
+\DeclareGHSPhrase{H412}{Harmful to aquatic life with long lasting effects.}
+\DeclareGHSPhrase{H413}{May cause long lasting harmful effects to aquatic life.}
+\DeclareGHSPhrase{H420}{Harms public health and the environment by destroying ozone in the upper atmosphere.}
+
+%--- EU supplemental hazard statements (CLP) ---------------------------------------------
+\DeclareGHSPhrase{EUH014}{Reacts violently with water.}
+\DeclareGHSPhrase{EUH018}{In use may form flammable/explosive vapour-air mixture.}
+\DeclareGHSPhrase{EUH019}{May form explosive peroxides.}
+\DeclareGHSPhrase{EUH029}{Contact with water liberates toxic gas.}
+\DeclareGHSPhrase{EUH031}{Contact with acids liberates toxic gas.}
+\DeclareGHSPhrase{EUH032}{Contact with acids liberates very toxic gas.}
+\DeclareGHSPhrase{EUH044}{Risk of explosion if heated under confinement.}
+\DeclareGHSPhrase{EUH066}{Repeated exposure may cause skin dryness or cracking.}
+\DeclareGHSPhrase{EUH070}{Toxic by eye contact.}
+\DeclareGHSPhrase{EUH071}{Corrosive to the respiratory tract.}
+\DeclareGHSPhrase{EUH208}{Contains \dots. May produce an allergic reaction.}
+\DeclareGHSPhrase{EUH210}{Safety data sheet available on request.}
+\DeclareGHSPhrase{EUH380}{May cause endocrine disruption in humans.}
+\DeclareGHSPhrase{EUH381}{Suspected of causing endocrine disruption in humans.}
+\DeclareGHSPhrase{EUH401}{To avoid risks to human health and the environment, comply with the instructions for use.}
+\DeclareGHSPhrase{EUH430}{May cause endocrine disruption in the environment.}
+\DeclareGHSPhrase{EUH431}{Suspected of causing endocrine disruption in the environment.}
+\DeclareGHSPhrase{EUH440}{Accumulates in the environment and living organisms including in humans.}
+\DeclareGHSPhrase{EUH441}{Strongly accumulates in the environment and living organisms including in humans.}
+\DeclareGHSPhrase{EUH450}{Can cause long-lasting and diffuse contamination of water resources.}
+\DeclareGHSPhrase{EUH451}{Can cause very long-lasting and diffuse contamination of water resources.}
+
+%=========================================================================================
+%   PRECAUTIONARY STATEMENTS
+%=========================================================================================
+
+%--- General -----------------------------------------------------------------------------
+\DeclareGHSPhrase{P101}{If medical advice is needed, have product container or label at hand.}
+\DeclareGHSPhrase{P102}{Keep out of reach of children.}
+\DeclareGHSPhrase{P103}{Read carefully and follow all instructions.}
+
+%--- Prevention --------------------------------------------------------------------------
+\DeclareGHSPhrase{P201}{Obtain special instructions before use.}
+\DeclareGHSPhrase{P202}{Do not handle until all safety precautions have been read and understood.}
+\DeclareGHSPhrase{P203}{Obtain, read and follow all safety instructions before use.}
+\DeclareGHSPhrase{P210}{Keep away from heat, hot surfaces, sparks, open flames and other ignition sources. No smoking.}
+\DeclareGHSPhrase{P211}{Do not spray on an open flame or other ignition source.}
+\DeclareGHSPhrase{P212}{Avoid heating under confinement or reduction of the desensitizing agent.}
+\DeclareGHSPhrase{P220}{Keep away from clothing and other combustible materials.}
+\DeclareGHSPhrase{P222}{Do not allow contact with air.}
+\DeclareGHSPhrase{P223}{Do not allow contact with water.}
+\DeclareGHSPhrase{P230}{Keep wetted with \dots}
+\DeclareGHSPhrase{P231}{Handle and store contents under inert gas/\dots}
+\DeclareGHSPhrase{P232}{Protect from moisture.}
+\DeclareGHSPhrase{P233}{Keep container tightly closed.}
+\DeclareGHSPhrase{P234}{Keep only in original packaging.}
+\DeclareGHSPhrase{P235}{Keep cool.}
+\DeclareGHSPhrase{P240}{Ground and bond container and receiving equipment.}
+\DeclareGHSPhrase{P241}{Use explosion-proof [electrical/ventilating/lighting/\dots] equipment.}
+\DeclareGHSPhrase{P242}{Use non-sparking tools.}
+\DeclareGHSPhrase{P243}{Take action to prevent static discharges.}
+\DeclareGHSPhrase{P244}{Keep valves and fittings free from oil and grease.}
+\DeclareGHSPhrase{P250}{Do not subject to grinding/shock/friction/\dots}
+\DeclareGHSPhrase{P251}{Do not pierce or burn, even after use.}
+\DeclareGHSPhrase{P260}{Do not breathe dust/fume/gas/mist/vapours/spray.}
+\DeclareGHSPhrase{P261}{Avoid breathing dust/fume/gas/mist/vapours/spray.}
+\DeclareGHSPhrase{P262}{Do not get in eyes, on skin, or on clothing.}
+\DeclareGHSPhrase{P263}{Avoid contact during pregnancy and while nursing.}
+\DeclareGHSPhrase{P264}{Wash \dots\ thoroughly after handling.}
+\DeclareGHSPhrase{P265}{Do not touch eyes.}
+\DeclareGHSPhrase{P270}{Do not eat, drink or smoke when using this product.}
+\DeclareGHSPhrase{P271}{Use only outdoors or in a well-ventilated area.}
+\DeclareGHSPhrase{P272}{Contaminated work clothing should not be allowed out of the workplace.}
+\DeclareGHSPhrase{P273}{Avoid release to the environment.}
+\DeclareGHSPhrase{P280}{Wear protective gloves/protective clothing/eye protection/face protection/hearing protection/\dots}
+\DeclareGHSPhrase{P282}{Wear cold insulating gloves and either face shield or eye protection.}
+\DeclareGHSPhrase{P283}{Wear fire resistant or flame retardant clothing.}
+\DeclareGHSPhrase{P284}{[In case of inadequate ventilation] wear respiratory protection.}
+% Combined prevention statements
+\DeclareGHSPhrase{P231+P232}{Handle and store contents under inert gas/\dots\ Protect from moisture.}
+\DeclareGHSPhrase{P264+P265}{Wash \dots\ thoroughly after handling. Do not touch eyes.}
+
+%--- Response ----------------------------------------------------------------------------
+\DeclareGHSPhrase{P301}{IF SWALLOWED:}
+\DeclareGHSPhrase{P302}{IF ON SKIN:}
+\DeclareGHSPhrase{P303}{IF ON SKIN (or hair):}
+\DeclareGHSPhrase{P304}{IF INHALED:}
+\DeclareGHSPhrase{P305}{IF IN EYES:}
+\DeclareGHSPhrase{P306}{IF ON CLOTHING:}
+\DeclareGHSPhrase{P308}{IF exposed or concerned:}
+\DeclareGHSPhrase{P310}{Immediately call a POISON CENTER/doctor/\dots}
+\DeclareGHSPhrase{P311}{Call a POISON CENTER/doctor/\dots}
+\DeclareGHSPhrase{P312}{Call a POISON CENTER/doctor/\dots\ if you feel unwell.}
+\DeclareGHSPhrase{P313}{Get medical advice/attention.}
+\DeclareGHSPhrase{P314}{Get medical advice/attention if you feel unwell.}
+\DeclareGHSPhrase{P315}{Get immediate medical advice/attention.}
+\DeclareGHSPhrase{P316}{Get emergency medical help immediately.}
+\DeclareGHSPhrase{P317}{Get medical help.}
+\DeclareGHSPhrase{P318}{IF exposed or concerned, get medical advice.}
+\DeclareGHSPhrase{P319}{Get medical help if you feel unwell.}
+\DeclareGHSPhrase{P320}{Specific treatment is urgent (see \dots\ on this label).}
+\DeclareGHSPhrase{P321}{Specific treatment (see \dots\ on this label).}
+\DeclareGHSPhrase{P330}{Rinse mouth.}
+\DeclareGHSPhrase{P331}{Do NOT induce vomiting.}
+\DeclareGHSPhrase{P332}{If skin irritation occurs:}
+\DeclareGHSPhrase{P333}{If skin irritation or rash occurs:}
+\DeclareGHSPhrase{P334}{Immerse in cool water [or wrap in wet bandages].}
+\DeclareGHSPhrase{P335}{Brush off loose particles from skin.}
+\DeclareGHSPhrase{P336}{Thaw frosted parts with lukewarm water. Do not rub affected area.}
+\DeclareGHSPhrase{P337}{If eye irritation persists:}
+\DeclareGHSPhrase{P338}{Remove contact lenses, if present and easy to do. Continue rinsing.}
+\DeclareGHSPhrase{P340}{Remove person to fresh air and keep comfortable for breathing.}
+\DeclareGHSPhrase{P342}{If experiencing respiratory symptoms:}
+\DeclareGHSPhrase{P351}{Rinse cautiously with water for several minutes.}
+\DeclareGHSPhrase{P352}{Wash with plenty of water/\dots}
+\DeclareGHSPhrase{P353}{Rinse skin with water [or shower].}
+\DeclareGHSPhrase{P354}{Immediately rinse with water for several minutes.}
+\DeclareGHSPhrase{P360}{Rinse immediately contaminated clothing and skin with plenty of water before removing clothes.}
+\DeclareGHSPhrase{P361}{Take off immediately all contaminated clothing.}
+\DeclareGHSPhrase{P362}{Take off contaminated clothing.}
+\DeclareGHSPhrase{P363}{Wash contaminated clothing before reuse.}
+\DeclareGHSPhrase{P364}{And wash it before reuse.}
+\DeclareGHSPhrase{P370}{In case of fire:}
+\DeclareGHSPhrase{P371}{In case of major fire and large quantities:}
+\DeclareGHSPhrase{P372}{Explosion risk.}
+\DeclareGHSPhrase{P373}{DO NOT fight fire when fire reaches explosives.}
+\DeclareGHSPhrase{P375}{Fight fire remotely due to the risk of explosion.}
+\DeclareGHSPhrase{P376}{Stop leak if safe to do so.}
+\DeclareGHSPhrase{P377}{Leaking gas fire: Do not extinguish, unless leak can be stopped safely.}
+\DeclareGHSPhrase{P378}{Use \dots\ to extinguish.}
+\DeclareGHSPhrase{P380}{Evacuate area.}
+\DeclareGHSPhrase{P381}{In case of leakage, eliminate all ignition sources.}
+\DeclareGHSPhrase{P390}{Absorb spillage to prevent material damage.}
+\DeclareGHSPhrase{P391}{Collect spillage.}
+% Combined response statements
+\DeclareGHSPhrase{P301+P310}{IF SWALLOWED: Immediately call a POISON CENTER/doctor/\dots}
+\DeclareGHSPhrase{P301+P312}{IF SWALLOWED: Call a POISON CENTER/doctor/\dots\ if you feel unwell.}
+\DeclareGHSPhrase{P301+P316}{IF SWALLOWED: Get emergency medical help immediately.}
+\DeclareGHSPhrase{P301+P317}{IF SWALLOWED: Get medical help.}
+\DeclareGHSPhrase{P301+P330+P331}{IF SWALLOWED: Rinse mouth. Do NOT induce vomiting.}
+\DeclareGHSPhrase{P302+P334}{IF ON SKIN: Immerse in cool water or wrap in wet bandages.}
+\DeclareGHSPhrase{P302+P352}{IF ON SKIN: Wash with plenty of water/\dots}
+\DeclareGHSPhrase{P303+P361+P353}{IF ON SKIN (or hair): Take off immediately all contaminated clothing. Rinse skin with water [or shower].}
+\DeclareGHSPhrase{P304+P312}{IF INHALED: Call a POISON CENTER/doctor/\dots\ if you feel unwell.}
+\DeclareGHSPhrase{P304+P340}{IF INHALED: Remove person to fresh air and keep comfortable for breathing.}
+\DeclareGHSPhrase{P305+P351+P338}{IF IN EYES: Rinse cautiously with water for several minutes. Remove contact lenses, if present and easy to do. Continue rinsing.}
+\DeclareGHSPhrase{P305+P354+P338}{IF IN EYES: Immediately rinse with water for several minutes. Remove contact lenses, if present and easy to do. Continue rinsing.}
+\DeclareGHSPhrase{P306+P360}{IF ON CLOTHING: Rinse immediately contaminated clothing and skin with plenty of water before removing clothes.}
+\DeclareGHSPhrase{P308+P311}{IF exposed or concerned: Call a POISON CENTER/doctor/\dots}
+\DeclareGHSPhrase{P308+P313}{IF exposed or concerned: Get medical advice/attention.}
+\DeclareGHSPhrase{P332+P313}{If skin irritation occurs: Get medical advice/attention.}
+\DeclareGHSPhrase{P333+P313}{If skin irritation or rash occurs: Get medical advice/attention.}
+\DeclareGHSPhrase{P337+P313}{If eye irritation persists: Get medical advice/attention.}
+\DeclareGHSPhrase{P342+P311}{If experiencing respiratory symptoms: Call a POISON CENTER/doctor/\dots}
+\DeclareGHSPhrase{P361+P364}{Take off immediately all contaminated clothing and wash it before reuse.}
+\DeclareGHSPhrase{P362+P364}{Take off contaminated clothing and wash it before reuse.}
+\DeclareGHSPhrase{P370+P376}{In case of fire: Stop leak if safe to do so.}
+\DeclareGHSPhrase{P370+P378}{In case of fire: Use \dots\ to extinguish.}
+\DeclareGHSPhrase{P370+P380+P375}{In case of fire: Evacuate area. Fight fire remotely due to the risk of explosion.}
+\DeclareGHSPhrase{P371+P380+P375}{In case of major fire and large quantities: Evacuate area. Fight fire remotely due to the risk of explosion.}
+\DeclareGHSPhrase{P370+P372+P380+P373}{In case of fire: Explosion risk. Evacuate area. DO NOT fight fire when fire reaches explosives.}
+
+%--- Storage -----------------------------------------------------------------------------
+\DeclareGHSPhrase{P401}{Store in accordance with \dots}
+\DeclareGHSPhrase{P402}{Store in a dry place.}
+\DeclareGHSPhrase{P403}{Store in a well-ventilated place.}
+\DeclareGHSPhrase{P404}{Store in a closed container.}
+\DeclareGHSPhrase{P405}{Store locked up.}
+\DeclareGHSPhrase{P406}{Store in a corrosion resistant/\dots\ container with a resistant inner liner.}
+\DeclareGHSPhrase{P407}{Maintain air gap between stacks or pallets.}
+\DeclareGHSPhrase{P410}{Protect from sunlight.}
+\DeclareGHSPhrase{P411}{Store at temperatures not exceeding \dots\,\textdegree C/\dots\,\textdegree F.}
+\DeclareGHSPhrase{P412}{Do not expose to temperatures exceeding \qty{50}{\degreeCelsius}/122\,\textdegree F.}
+\DeclareGHSPhrase{P413}{Store bulk masses greater than \dots\ kg/\dots\ lbs at temperatures not exceeding \dots\,\textdegree C/\dots\,\textdegree F.}
+\DeclareGHSPhrase{P420}{Store separately.}
+% Combined storage statements
+\DeclareGHSPhrase{P402+P404}{Store in a dry place. Store in a closed container.}
+\DeclareGHSPhrase{P403+P233}{Store in a well-ventilated place. Keep container tightly closed.}
+\DeclareGHSPhrase{P403+P235}{Store in a well-ventilated place. Keep cool.}
+\DeclareGHSPhrase{P410+P403}{Protect from sunlight. Store in a well-ventilated place.}
+\DeclareGHSPhrase{P410+P412}{Protect from sunlight. Do not expose to temperatures exceeding \qty{50}{\degreeCelsius}/122\,\textdegree F.}
+
+%--- Disposal ----------------------------------------------------------------------------
+\DeclareGHSPhrase{P501}{Dispose of contents/container to \dots}
+\DeclareGHSPhrase{P502}{Refer to manufacturer or supplier for information on recovery or recycling.}
+\DeclareGHSPhrase{P503}{Refer to manufacturer/supplier/\dots\ for information on disposal/recovery/recycling.}

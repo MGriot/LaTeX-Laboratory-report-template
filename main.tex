@@ -1,45 +1,43 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% University/School Laboratory Report
-% LaTeX Template
-% Version X.X (March xx, 202X)
+%----------------------------------------------------------------------------------------
+%	LaTeX Scientific Report Template
+%   A template for university and school laboratory reports (chemistry oriented).
 %
-% This class originates from:
-% https://github.com/MGriot/Relation-Template-LaTeX
+%   Source:  https://github.com/MGriot/LaTeX-Scientific-Report-Template
+%   Author:  M. Griot
+%   License: GPL-3.0 (see LICENSE)
 %
-% Authors:
-% MGriot
-%
-% License:
-% GPL-3.0 (https://github.com/MGriot/Relation-Template-LaTeX/blob/master/LICENSE)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Build:   latexmk main.tex   (pdfLaTeX + biber, output in .out/)
+%----------------------------------------------------------------------------------------
 
 \documentclass[a4paper]{article}
 
-\input{config/package} %package utilizzati per il documento
-\input{config/settings} %file con settaggi
+\input{config/package}  % packages
+\input{config/settings} % report information, layout and custom commands
 
-\input{config/preset/preset_1a} %add preset for title and date, alternatively you can use preset_2a
+% Title-block preset: preset_1a (date in the title) or preset_2a (no date, use with 2b)
+\input{config/preset/preset_1a}
 
 \begin{document}
-\maketitle %crea il titolo
 
-%\input{config/preset/preset_2b} %add preset_2b
+\maketitle
+% \input{config/preset/preset_2b} % information table, use with preset_2a
 
-\input{section/Sommario} %da eleiminare
-\input{section/1_Obbiettivo}
-\input{section/2_Principio_del_metodo}
-\input{section/3_Strumenti}
-\input{section/4_Reagenti}
-\input{section/5_Procedimento}
-\input{section/6_Reazioni}
-\input{section/7_Dati_e_Calcoli}
-\input{section/8_Conclusioni}
-\input{section/9_Bibliografia}
-\input{section/10_H_e_P_frasi}
+\input{section/0_abstract} % explains the report structure: replace with your own abstract
+\input{section/1_objective}
+\input{section/2_principle_of_the_method}
+\input{section/3_instruments}
+\input{section/4_reagents}
+\input{section/5_procedure}
+\input{section/6_reactions}
+\input{section/7_data_and_calculations}
+\input{section/8_conclusions}
+\input{section/9_bibliography}
+\input{section/10_hazard_statements}
 
-\newpage
-\input{section/link_utili} %link utili, elimina
-\newpage
-\input{section/esempi} %parte di esempi per immagini o formule, elimina pure dopo aver scritto la relazione.
+% Reference material for the author: delete both lines in a real report.
+\clearpage
+\input{section/useful_links}
+\clearpage
+\input{section/examples}
+
 \end{document}

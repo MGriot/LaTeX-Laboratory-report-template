@@ -1,39 +1,63 @@
 %----------------------------------------------------------------------------------------
 %	PACKAGES
+%   Load order matters: hyperref must come (almost) last and cleveref after it.
+%   UTF-8 input is the LaTeX default since 2018, so inputenc is not needed.
 %----------------------------------------------------------------------------------------
 
-%\usepackage[T1]{fontenc} % Output font encoding for international characters
-\usepackage[utf8]{inputenc} % Required for inputting international characters
-\usepackage[italian]{babel}%traduzione parti generate automaticamente
-\usepackage{geometry}
-%\usepackage{datetime}%for better date format
-\usepackage[fontsize=13pt]{scrextend} % for change the fontsize, different from article class
-\usepackage{fancyhdr}
-\usepackage{indentfirst} %identatione nella prima frase del paragrafo
-\usepackage{lastpage}
+%--- Fonts, language and typography -----------------------------------------------------
+\usepackage[T1]{fontenc}          % proper hyphenation and copy-paste of accented characters
+\usepackage{lmodern}              % scalable Latin Modern fonts for T1
+\usepackage[english]{babel}       % language of automatically generated text (Contents, Figure, ...)
+\usepackage{microtype}            % subtle spacing improvements, fewer overfull boxes
+\usepackage{csquotes}             % \enquote{...}, language-aware quotation marks
+\usepackage[fontsize=13pt]{scrextend} % arbitrary base font size (article only offers 10/11/12pt)
+\usepackage{indentfirst}          % indent the first paragraph after a heading too
+
+%--- Page layout ------------------------------------------------------------------------
+\usepackage{geometry}             % margins, set in config/settings.tex
+\usepackage{fancyhdr}             % header and footer
+\usepackage{lastpage}             % total page count for "Page x of y"
+\usepackage{multicol}             % multi-column lists
+
+%--- Colours and boxes ------------------------------------------------------------------
 \usepackage{xcolor}
-\usepackage{mdframed}
-\usepackage[version=4]{mhchem}%per formule e equazioni chimiche
-\usepackage{chemfig} %per formule 2D chimica
-\usepackage{modiagram} %molecular orbital diagrams
-\usepackage{wrapfig}
-\usepackage{floatrow}
+\usepackage{mdframed}             % framed boxes
+
+%--- Mathematics and units --------------------------------------------------------------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{siunitx}              % \qty{25}{\milli\litre}, \unit{\mole\per\litre}, \num{1.2e-3}
+
+%--- Chemistry --------------------------------------------------------------------------
+\usepackage[version=4]{mhchem}    % \ce{...}: chemical formulae and equations
+\usepackage{chemfig}              % 2D structural formulae
+\usepackage{modiagram}            % molecular orbital diagrams
+
+%--- Graphics, plots and diagrams -------------------------------------------------------
+\usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{pgfplots}
-\usepackage{subcaption}
-\usepackage{longtable} %Multi-page tables
-\usepackage{graphicx}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{tabularx}
-\usepackage{array}
-\usepackage{amsmath}
-\usepackage{booktabs}
-\usepackage{multicol}
-\usepackage[font=scriptsize]{caption}%per didascalia immagini 
-\usepackage{xstring} % per creare p e h phrase command
-\usepackage{csquotes}
-\usepackage[colorinlistoftodos,prependcaption,textsize=scriptsize]{todonotes}%solo per le note, utile per prendere appunti, se aggiungi "disable" si tolgono tutti dal pdf ma possono rimanere nel testo.
-\usepackage{xargs} % Use more than one optional parameter in a new commands
-\usepackage[autocite=superscript,style=chem-acs,articletitle,doi,url]{biblatex}%bibliografia, usare \autocite per usare lo stile american chemical society
-\usepackage{hyperref}%hyperlinks
+
+%--- Floats, captions and tables --------------------------------------------------------
+\usepackage{floatrow}             % captions beside figures (\floatbox); loads caption
+\usepackage[font=small]{caption}  % caption font size
+\usepackage{subcaption}           % subfigure environment
+\usepackage{wrapfig}              % figures wrapped by text
+\usepackage{array}                % m{} columns, column formatting
+\usepackage{tabularx}             % X columns that fill the line width
+\usepackage{booktabs}             % \toprule, \midrule, \bottomrule
+\usepackage{longtable}            % tables spanning several pages
+
+%--- Annotations ------------------------------------------------------------------------
+% Add the "disable" option to hide every note in the PDF while keeping them in the source.
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\usepackage{xargs}                % \newcommandx: several optional arguments
+
+%--- Bibliography -----------------------------------------------------------------------
+% American Chemical Society style; cite with \autocite{key} (superscript numbers).
+\usepackage[backend=biber,autocite=superscript,style=chem-acs,articletitle,doi,url]{biblatex}
+
+%--- Hyperlinks and cross-references (keep last) ----------------------------------------
+\usepackage{hyperref}
+\usepackage[capitalise,noabbrev]{cleveref} % \cref{fig:x} -> "Figure 1"
